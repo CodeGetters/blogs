@@ -1,6 +1,7 @@
 module.exports={
     title:"JohnsonXin",
     description:"JohnsonXin的个人博客",
+    theme:"reco",
     themeConfig:{
         // 作者
         author:"JohnsonXin",
