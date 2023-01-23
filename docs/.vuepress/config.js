@@ -2,6 +2,9 @@ module.exports={
     title:"JohnsonXin",
     description:"JohnsonXin的个人博客",
     theme:"reco",
+    locale:{
+        lang:"zh-CN",
+    },
     themeConfig:{
         // 作者
         author:"JohnsonXin",
@@ -21,5 +24,20 @@ module.exports={
                 ]
             }
         ],
+        // 博客配置
+        blogConfig: {
+            category: {
+                // 在导航栏菜单中所占的位置，默认2
+                location: 2,
+                // 默认文案 “分类”
+                text: "博客",
+            },
+            tag: {
+                // 在导航栏菜单中所占的位置，默认4
+                location: 4,
+                // 默认文案 “标签”
+                text: "Tag",
+            },
+        },
     }
 }
