@@ -6,10 +6,10 @@ module.exports={
         lang:"zh-CN",
     },
     themeConfig:{
-    type:"blog",
-    subSidebar:"auto",
-    logo:"/avatar.jpg",
-    authorAvatar:"/avatar.jpg",
+        type:"blog",
+        subSidebar:"auto",
+        logo:"/avatar.jpg",
+        authorAvatar:"/avatar.jpg",
         // 作者
         author:"JohnsonXin",
         nav:[
@@ -43,5 +43,22 @@ module.exports={
                 text: "Tag",
             },
         },
-    }
+    },
+    plugins: [
+        [
+          "sakura",
+          {
+            // 默认数量
+            num: 20, 
+            //  是否显示
+            show: true, 
+            // 层级
+            zIndex: -1, 
+            img: {
+                // false 默认图 true 换图 需要填写httpUrl地址
+              replace: false, 
+            },
+          },
+        ],
+     ]
 }

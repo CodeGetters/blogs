@@ -9058,6 +9058,11 @@ vuepress-plugin-mailchimp@^1.4.1:
     jsonp "^0.2.1"
     query-string "^6.9.0"
 
+vuepress-plugin-sakura@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.npmmirror.com/vuepress-plugin-sakura/-/vuepress-plugin-sakura-1.2.1.tgz#4e69a41e49246a13c416d847586a3a7153c1289a"
+  integrity sha512-76q8SsTZngGIZB3+HQvZBUPn8DfgUreei2n6CINmsR0hc7zom5eOWbL0VbxVMnJc7axL1ED3etZuBd68TaBIxg==
+
 vuepress-plugin-sitemap@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmmirror.com/vuepress-plugin-sitemap/-/vuepress-plugin-sitemap-2.3.1.tgz#51298aca77a5de96396fdbd1103e1637dd61ae6a"
