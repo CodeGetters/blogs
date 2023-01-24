@@ -6,6 +6,10 @@ module.exports={
         lang:"zh-CN",
     },
     themeConfig:{
+    type:"blog",
+    subSidebar:"auto",
+    logo:"/avatar.jpg",
+    authorAvatar:"/avatar.jpg",
         // 作者
         author:"JohnsonXin",
         nav:[

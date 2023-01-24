@@ -1,3 +1,16 @@
+---
+home: true
+heroImage: "/live.jpg"
+heroText: JohnsonXin
+heroImageStyle:
+  {
+    maxHeight: "288px",
+    display: block,
+    borderRadius: "19% 81% 23% 77% / 44% 57% 43% 56%",
+    boxShadow: "0 15px 18px rgba(0,0,0,0.2)",
+  } 
+---
+
 <h3>
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25" alt="手势">
   Hi there I’m @Johnson Xin~
