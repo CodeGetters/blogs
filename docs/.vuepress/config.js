@@ -1,7 +1,13 @@
 module.exports = {
-    title: "JohnsonXin",
-    description: "JohnsonXin的个人博客",
+    title: "风和日暖，令人愿意永远活下去",
+    description: "",
     theme: "reco",
+    base:"/",
+    head:[
+        [
+            "link",{rel:"icon",href:"/00.ico"}
+        ]
+    ],
     locale: {
         lang: "zh-CN",
     },
@@ -80,25 +86,23 @@ module.exports = {
 
                     },
                     {
-                        name: "我再没见过 想你一本的星空",
+                        name: "我再没见过 像你一般的星空",
                         artist: "Seto",
                         url: "https://assets.smallsunnyfox.com/music/2.mp3",
                         cover: "https://assets.smallsunnyfox.com/music/2.jpg"
                     },
-                    {
-                        name: "Hear Me Now",
-                        artist: "Alok / Zeeba / Bruno Martini",
-                        //url: "https://sr-sycdn.kuwo.cn/2de791887191dd6da661970b37f98673/63cf4c20/resource/n2/26/68/3129151473.mp3",
-                        url: "Hear Me Now.mp3",
-                        cover: "http://p1.music.126.net/jB45ubgQ30qsGrv7MBkhEQ==/109951164852474437.jpg?param=130y130"
-                    },
-                    {
-                        name: "Diary of a poor kid",
-                        artist: "Papa Khan",
-                        //url: "https://cw-sycdn.kuwo.cn/fe435b5743a07f8ef4420b18fcd232e7/63cf4bc1/resource/n3/2/98/2383933166.mp3",
-                        url: "/Diary of a poor kid.mp3",
-                        cover: "http://p3.music.126.net/QmRNo3rHpNpt3VcRhd0BiA==/109951165406228694.jpg?param=300x300"
-                    },
+                    //{
+                    //    name: "Hear Me Now",
+                    //    artist: "Alok / Zeeba / Bruno Martini",
+                    //    url: "Hear Me Now.mp3",
+                    //    cover: "http://p1.music.126.net/jB45ubgQ30qsGrv7MBkhEQ==/109951164852474437.jpg?param=130y130"
+                    //},
+                    //{
+                    //    name: "Diary of a poor kid",
+                    //    artist: "Papa Khan",
+                    //    url: "/Diary of a poor kid.mp3",
+                    //    cover: "http://p3.music.126.net/QmRNo3rHpNpt3VcRhd0BiA==/109951165406228694.jpg?param=300x300"
+                    //},
 
 
                 ],
