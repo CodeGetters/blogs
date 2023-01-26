@@ -110,6 +110,9 @@ module.exports = {
             {
                 hm: "2465e092f70686717972961b02e1076a"
             }
-        ]
+        ],
+        //页面切换进度条
+        '@vuepress/plugin-nprogress',
+
     ]
 }
