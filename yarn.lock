@@ -9101,6 +9101,11 @@ vuepress-plugin-mailchimp@^1.4.1:
     jsonp "^0.2.1"
     query-string "^6.9.0"
 
+vuepress-plugin-one-click-copy@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmmirror.com/vuepress-plugin-one-click-copy/-/vuepress-plugin-one-click-copy-1.0.6.tgz#71563b1851013705fab6d48b0bda6028dddbf0e7"
+  integrity sha512-apFCcsBwk9IEDm5HwD6dwor30rl8gr0VjPkmrQlFSR2KD7OjK3ZUwioeEvbrcAiZBi35V6YgndLAHksJXRfpnQ==
+
 vuepress-plugin-sakura@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmmirror.com/vuepress-plugin-sakura/-/vuepress-plugin-sakura-1.2.1.tgz#4e69a41e49246a13c416d847586a3a7153c1289a"

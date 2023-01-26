@@ -113,6 +113,17 @@ module.exports = {
         ],
         //页面切换进度条
         '@vuepress/plugin-nprogress',
-
+        [
+            'one-click-copy',
+            {
+                copySelector: [
+                    'div[class*="language-"] pre',
+                    'div[class*="aside-code"] aside',
+                ],
+                copyMessage: '复制成功',
+                duration: 1000,
+                showInMobile: false,
+            }
+        ]
     ]
 }
