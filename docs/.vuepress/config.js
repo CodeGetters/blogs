@@ -114,6 +114,7 @@ module.exports = {
         //页面切换进度条
         '@vuepress/plugin-nprogress',
         [
+            //点击复制代码
             'one-click-copy',
             {
                 copySelector: [
@@ -124,6 +125,16 @@ module.exports = {
                 duration: 1000,
                 showInMobile: false,
             }
+        ],
+        [
+            //著作权信息
+            'copyright',
+            {
+                // 选中的文字将无法被复制
+                authorName: 'JohnsonXin',
+                // 如果长度超过  20 个字符
+                minLength: 15,
+            },
         ]
     ]
 }
