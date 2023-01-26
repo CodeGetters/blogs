@@ -1619,7 +1619,7 @@
   dependencies:
     medium-zoom "^1.0.4"
 
-"@vuepress/plugin-nprogress@1.9.8":
+"@vuepress/plugin-nprogress@1.9.8", "@vuepress/plugin-nprogress@^1.9.8":
   version "1.9.8"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.9.8.tgz#78132a59c1139d9a225441fa69e4af82d0ffe945"
   integrity sha512-RW2n2VTnc36zPUMlQ9+uOu57ao9RKDvOIGoFqTPqvORiTI56VnyAipOv+79EqTky6DqXSG+ixzq+oE9gSJ8cXA==
