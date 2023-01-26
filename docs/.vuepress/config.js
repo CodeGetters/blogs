@@ -2,10 +2,14 @@ module.exports = {
     title: "风和日暖，令人愿意永远活下去",
     description: "风里雨里，这里等你",
     theme: "reco",
-    base:"/",
-    head:[
+    base: "/",
+    head: [
         [
-            "link",{rel:"icon",href:"/00.ico"}
+            "link", {rel: "icon", href: "/00.ico"},
+            //移动端优化
+            ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
+            //搜索关键字
+            ['meta', {name: 'keywords', content: 'JohnsonXin,博客'}],
         ]
     ],
     locale: {
@@ -91,20 +95,6 @@ module.exports = {
                         url: "https://assets.smallsunnyfox.com/music/2.mp3",
                         cover: "https://assets.smallsunnyfox.com/music/2.jpg"
                     },
-                    //{
-                    //    name: "Hear Me Now",
-                    //    artist: "Alok / Zeeba / Bruno Martini",
-                    //    url: "Hear Me Now.mp3",
-                    //    cover: "http://p1.music.126.net/jB45ubgQ30qsGrv7MBkhEQ==/109951164852474437.jpg?param=130y130"
-                    //},
-                    //{
-                    //    name: "Diary of a poor kid",
-                    //    artist: "Papa Khan",
-                    //    url: "/Diary of a poor kid.mp3",
-                    //    cover: "http://p3.music.126.net/QmRNo3rHpNpt3VcRhd0BiA==/109951165406228694.jpg?param=300x300"
-                    //},
-
-
                 ],
                 // 是否默认缩小
                 autoShrink: true,
@@ -114,5 +104,12 @@ module.exports = {
                 floatStyle: {bottom: "20px", "z-index": "999999"},
             },
         ],
+        [
+            //百度统计
+            'vuepress-plugin-baidu-tongji',
+            {
+                hm: "2465e092f70686717972961b02e1076a"
+            }
+        ]
     ]
 }
