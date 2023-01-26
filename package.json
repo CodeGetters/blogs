@@ -6,6 +6,7 @@
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.4",
     "vuepress": "^1.9.8",
+    "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-cursor-effects": "^1.1.6",
     "vuepress-plugin-sakura": "^1.2.1"
   },
