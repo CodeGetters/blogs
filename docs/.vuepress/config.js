@@ -1,6 +1,6 @@
 module.exports = {
     title: "风和日暖，令人愿意永远活下去",
-    description: "",
+    description: "风里雨里，这里等你",
     theme: "reco",
     base:"/",
     head:[
