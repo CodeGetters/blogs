@@ -1,6 +1,5 @@
 module.exports = {
     title: "风和日暖，令人愿意永远活下去",
-    description: "风里雨里，这里等你",
     theme: "reco",
     base: "/",
     head: [
@@ -18,11 +17,15 @@ module.exports = {
     themeConfig: {
         type: "blog",
         subSidebar: "auto",
+        sidebarDepth:1,
+        displayAllHeaders:false,
+        // 最后更新时间
+        lastUpdated: 'Last Updated',
         logo: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
         authorAvatar: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
         // 作者
         author: "JohnsonXin",
-        startYear:"2023",
+        startYear: "2023",
         nav: [
             {text: "首页", link: "/"},
             {
@@ -145,5 +148,21 @@ module.exports = {
                 theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
             }
         ],
+        [
+            'vuepress-plugin-comment',
+            {
+                choosen: 'valine',
+                // options选项中的所有参数，会传给Valine的配置
+                options: {
+                    el: '#valine-vuepress-comment',
+                    appId: 'sEH0f9Yv07EJH6PJX5VPpApE-gzGzoHsz',
+                    appKey: 'HFSmme1Q9TsSXSwEsl1tNDnK',
+                    avatar:"retro",
+                    placeholder:"在这里留下你的足迹吧！",
+                    enableQQ:true,
+                    //serverURLs:"https://leanserver.reday.asia"
+                }
+            }
+        ]
     ]
 }
