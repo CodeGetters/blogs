@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: JohnsonXin
-bgImage: "/live.jpg"
+bgImage: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/live.jpg"
 bgImageStyle: { height: "700px", boxShadow: "0 15px 18px rgba(0,0,0,0.2)" }
 ---
 
