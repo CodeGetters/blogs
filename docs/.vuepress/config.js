@@ -5,7 +5,7 @@ module.exports = {
     base: "/",
     head: [
         [
-            "link", {rel: "icon", href: "/00.ico"},
+            "link", {rel: "icon", href: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/00.ico"},
             //移动端优化
             ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
             //搜索关键字
@@ -18,8 +18,8 @@ module.exports = {
     themeConfig: {
         type: "blog",
         subSidebar: "auto",
-        logo: "/avatar.jpg",
-        authorAvatar: "/avatar.jpg",
+        logo: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
+        authorAvatar: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
         // 作者
         author: "JohnsonXin",
         nav: [
@@ -79,6 +79,7 @@ module.exports = {
             },
         ],
         [
+            //音乐播放器
             "@vuepress-reco/vuepress-plugin-bgm-player",
             {
                 audios: [
