@@ -22,6 +22,7 @@ module.exports = {
         authorAvatar: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
         // 作者
         author: "JohnsonXin",
+        startYear:"2023",
         nav: [
             {text: "首页", link: "/"},
             {
@@ -144,23 +145,5 @@ module.exports = {
                 theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
             }
         ],
-        [
-            //评论
-            '@vssue/vuepress-plugin-vssue',
-            {
-                // 设置平台，而不是 `api`
-                platform: 'github-v4',
-                // 仓库的拥有者的名称
-                owner: 'CodeGetters',
-                // 存储 Issue 和评论的仓库的名称
-                repo: 'blogs-remark',
-                // Client ID
-                clientId: '7074874f254263e86aec',
-                // Client secrets
-                clientSecret: '1eb3b276974f8773426d53f2f9ba2c94bdc5e70b',
-                //自动创建评论
-                autoCreateIssue: true
-            }
-        ]
     ]
 }

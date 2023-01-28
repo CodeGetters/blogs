@@ -1308,7 +1308,7 @@
     "@vssue/utils" "^1.4.7"
     axios "^0.21.1"
 
-"@vssue/api-github-v4@^1.2.0", "@vssue/api-github-v4@^1.4.7":
+"@vssue/api-github-v4@^1.2.0":
   version "1.4.7"
   resolved "https://registry.npmmirror.com/@vssue/api-github-v4/-/api-github-v4-1.4.7.tgz#873554ec8e8351e5eeb8ca76246c2914b20e1bc4"
   integrity sha512-Tk4ZYyX03RwoVy29RW1+ZdqESzX/gLsN9010Eaq0WT/2pNV+8quyT9TMypIZp6rZCGNYTSdxB8ET4IiF7SLKXQ==
@@ -1332,7 +1332,7 @@
     date-fns "^1.29.0"
     qs "^6.6.0"
 
-"@vssue/vuepress-plugin-vssue@^1.2.0", "@vssue/vuepress-plugin-vssue@^1.4.8":
+"@vssue/vuepress-plugin-vssue@^1.2.0":
   version "1.4.8"
   resolved "https://registry.npmmirror.com/@vssue/vuepress-plugin-vssue/-/vuepress-plugin-vssue-1.4.8.tgz#37b8ada338c1222a143eb648555372d2959f4624"
   integrity sha512-0QzegHl/Rx4/XgXswThIJi4Yk+b6AIaM450jX6p4RbOM6yOTzEKLTMduUo54Rvhq/NHNusu4Yy/w1iY8NTqBEg==
