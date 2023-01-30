@@ -57,11 +57,11 @@ module.exports = {
         sidebarDepth: 1,
         displayAllHeaders: false,
         sidebar: {
-            "/note/":[
+            "/note/": [
                 {
                     title: "html",
-                    collapse:true,
-                    children:['html/01','html/02']
+                    collapse: true,
+                    children: ['html/01', 'html/02']
                 }
             ]
         },
@@ -189,6 +189,16 @@ module.exports = {
                     placeholder: "在这里留下你的足迹吧！",
                     enableQQ: true,
                     //serverURLs:"https://leanserver.reday.asia"
+                }
+            }
+        ],
+        [
+            '@vuepress/pwa',
+            {
+                serviceWorker: true,
+                updatePopup: {
+                    message: '发现新内容可用',
+                    buttonText: '刷新'
                 }
             }
         ]
