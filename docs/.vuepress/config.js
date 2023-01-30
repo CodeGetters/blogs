@@ -10,7 +10,6 @@ module.exports = {
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
         ['meta', {name: 'keywords', content: 'JohnsonXin,博客'}],
-
     ],
     locale: {
         lang: "zh-CN",
