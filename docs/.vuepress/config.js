@@ -17,7 +17,7 @@ module.exports = {
     themeConfig: {
         type: "blog",
         //搜索设置
-        search:true,
+        search: true,
         searchMaxSuggestions: 10,
         // 最后更新时间
         lastUpdated: 'Last Updated',
@@ -26,32 +26,24 @@ module.exports = {
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
-        //自动形成侧边栏
-        subSidebar: "auto",
-        sidebarDepth: 1,
-        displayAllHeaders:false,
         nav: [
             {text: "首页", link: "/"},
+            {text: 'Notes', link: '/note/', icon: 'reco-document'},
+            {text: 'TimeLine', link: '/timeline/', icon: 'reco-date'},
             {
                 text: "JohnsonXin 的小站",
-                items: [
-                    {
-                        text: "掘金",
-                        link: "https://juejin.cn/user/2573324506368663"
-                    },
-                    {
-                        text: "GitHub",
-                        link: "https://github.com/CodeGetters"
-                    }
-                ]
+                items: [{text: "掘金", link: "https://juejin.cn/user/2573324506368663"}, {
+                    text: "GitHub",
+                    link: "https://github.com/CodeGetters"
+                }]
             }
         ],
         friendLink: [
             {
                 title: "vuepress",
-                desc:"Vue-powered Static Site Generator",
+                desc: "Vue-powered Static Site Generator",
                 logo: "https://vuepress.vuejs.org/logo.png",
-                link:"https://vuepress.vuejs.org/zh/"
+                link: "https://vuepress.vuejs.org/zh/"
             },
             {
                 title: 'vuepress-theme-reco',
@@ -60,6 +52,19 @@ module.exports = {
                 link: 'https://vuepress-theme-reco.recoluan.com'
             },
         ],
+        //自动形成侧边栏
+        subSidebar: "auto",
+        sidebarDepth: 1,
+        displayAllHeaders: false,
+        sidebar: {
+            "/note/":[
+                {
+                    title: "html",
+                    collapse:true,
+                    children:['html/01','html/02']
+                }
+            ]
+        },
         // 博客配置
         blogConfig: {
             category: {
@@ -76,8 +81,8 @@ module.exports = {
             },
         },
     },
-    markdown:{
-        lineNumbers:true,
+    markdown: {
+        lineNumbers: true,
 
     },
     plugins: [
@@ -180,9 +185,9 @@ module.exports = {
                     el: '#valine-vuepress-comment',
                     appId: 'sEH0f9Yv07EJH6PJX5VPpApE-gzGzoHsz',
                     appKey: 'HFSmme1Q9TsSXSwEsl1tNDnK',
-                    avatar:"retro",
-                    placeholder:"在这里留下你的足迹吧！",
-                    enableQQ:true,
+                    avatar: "retro",
+                    placeholder: "在这里留下你的足迹吧！",
+                    enableQQ: true,
                     //serverURLs:"https://leanserver.reday.asia"
                 }
             }
