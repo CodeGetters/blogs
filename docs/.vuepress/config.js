@@ -58,6 +58,10 @@ module.exports = {
             },
         },
     },
+    markdown:{
+        lineNumbers:true,
+
+    },
     plugins: [
         [
             "sakura",
@@ -149,6 +153,7 @@ module.exports = {
             }
         ],
         [
+            //评论
             'vuepress-plugin-comment',
             {
                 choosen: 'valine',
