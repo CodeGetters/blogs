@@ -1,0 +1,16 @@
+{
+  "name": "liveForever",
+  "short_name": "LF",
+  "display": "standalone",
+  "background_color": "#fff",
+  "start_url": "/index.html",
+  "description": "JohnsonXin的博客",
+  "theme_color": "#ff66cc",
+  "icons": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/00.ico",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

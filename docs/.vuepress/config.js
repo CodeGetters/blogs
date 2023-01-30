@@ -3,13 +3,14 @@ module.exports = {
     theme: "reco",
     base: "/",
     head: [
-        [
-            "link", {rel: "icon", href: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/00.ico"},
-            //移动端优化
-            ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
-            //搜索关键字
-            ['meta', {name: 'keywords', content: 'JohnsonXin,博客'}],
-        ]
+        ["link", {rel: "icon", href: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/00.ico"},],
+        //pwa
+        ['link', {rel: 'manifest', href: '/manifest.json'}],
+        //移动端优化
+        ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
+        //搜索关键字
+        ['meta', {name: 'keywords', content: 'JohnsonXin,博客'}],
+
     ],
     locale: {
         lang: "zh-CN",
