@@ -16,9 +16,9 @@ module.exports = {
     },
     themeConfig: {
         type: "blog",
-        subSidebar: "auto",
-        sidebarDepth:1,
-        displayAllHeaders:false,
+        //搜索设置
+        search:true,
+        searchMaxSuggestions: 10,
         // 最后更新时间
         lastUpdated: 'Last Updated',
         logo: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
@@ -26,6 +26,10 @@ module.exports = {
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
+        //自动形成侧边栏
+        subSidebar: "auto",
+        sidebarDepth: 1,
+        displayAllHeaders:false,
         nav: [
             {text: "首页", link: "/"},
             {
@@ -41,6 +45,20 @@ module.exports = {
                     }
                 ]
             }
+        ],
+        friendLink: [
+            {
+                title: "vuepress",
+                desc:"Vue-powered Static Site Generator",
+                logo: "https://vuepress.vuejs.org/logo.png",
+                link:"https://vuepress.vuejs.org/zh/"
+            },
+            {
+                title: 'vuepress-theme-reco',
+                desc: 'A simple and beautiful vuepress Blog & Doc theme.',
+                logo: 'https://photo.smallsunnyfox.com/images/blog/friendlink/theme_reco.png',
+                link: 'https://vuepress-theme-reco.recoluan.com'
+            },
         ],
         // 博客配置
         blogConfig: {
