@@ -9,6 +9,9 @@ module.exports = {
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
         ['meta', {name: 'keywords', content: 'JohnsonXin,博客,vuepress,个人博客'}],
+        //pwa
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ],
     locales: {
         "/": {
@@ -30,7 +33,7 @@ module.exports = {
         author: "JohnsonXin",
         startYear: "2023",
         nav: [
-            {text: "首页", link: "/"},
+            {text: "首页", link: "/",icon: "reco-home"},
             {text: '笔记', link: '/note/', icon: 'reco-document'},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "关于", link: "/about/", icon: "reco-account"},

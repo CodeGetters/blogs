@@ -1,10 +1,18 @@
-// 主题颜色
-$accentColor = #135ce0
-// 文本颜色
-$textColor = #2c3e50
-// 边框线颜色
-$borderColor = #eaecef
-// 代码块背景色
-$codeBgColor = #282c34
-// 悬浮块背景色
-$backgroundColor = #ffffff
+$accentColor = #0567f1
+$textColor = #232521
+$textShadow = 0
+// 标题透明
+.home-blog .hero h1, .home-blog .hero .description, .home-blog .hero .action
+  color rgba(255, 255, 255, 0) !important
+// 文章和标签中间的竖线(颜色变淡)
+.home-blog .home-blog-wrapper .info-wrapper .num > div:first-child
+  border-right 1px solid #eaecef
+// 导航栏
+.navbar
+  background #7F7FD5 !important
+  background -webkit-linear-gradient(to right top, #82b1ff, #77a8ff, #6da0ff, #6497ff, #5b8efe) !important
+  background linear-gradient(to right top, #82b1ff, #77a8ff, #6da0ff, #6497ff, #5b8efe) !important
+header .links
+  background-color transparent !important
+.abstract-item .title
+  margin-bottom 15px !important
