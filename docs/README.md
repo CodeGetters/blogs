@@ -1,10 +1,8 @@
 ---
 home: true
-bgImage: "/preview.gif"
+bgImage: "/preview.jpg"
 bgImageStyle: { 
 height: "400px" 
 }
 isShowTitleInHome: false
 ---
-
-<valine></valine>
