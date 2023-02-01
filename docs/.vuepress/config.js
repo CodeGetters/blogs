@@ -28,15 +28,16 @@ module.exports = {
         startYear: "2023",
         nav: [
             {text: "首页", link: "/"},
-            {text: 'Notes', link: '/note/', icon: 'reco-document'},
-            {text: 'TimeLine', link: '/timeline/', icon: 'reco-date'},
+            {text: '笔记', link: '/note/', icon: 'reco-document'},
+            {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
+            {text: "关于", link: "/about/", icon: "reco-account"},
             {
                 text: "JohnsonXin 的小站",
                 items: [{text: "掘金", link: "https://juejin.cn/user/2573324506368663"}, {
                     text: "GitHub",
                     link: "https://github.com/CodeGetters"
                 }]
-            }
+            },
         ],
         friendLink: [
             {
@@ -55,6 +56,7 @@ module.exports = {
         //自动形成侧边栏
         subSidebar: "auto",
         sidebarDepth: 1,
+        //显示所有页面的标题链接
         displayAllHeaders: false,
         sidebar: {
             "/note/": [
@@ -71,7 +73,7 @@ module.exports = {
                 // 在导航栏菜单中所占的位置，默认2
                 location: 2,
                 // 默认文案 “分类”
-                text: "博客",
+                text: "分类",
             },
             tag: {
                 // 在导航栏菜单中所占的位置，默认4
@@ -134,6 +136,8 @@ module.exports = {
                 shrinkMode: "float",
                 // 悬浮窗样式
                 floatStyle: {bottom: "20px", "z-index": "999999"},
+                //自动播放
+                autoplay: true
             },
         ],
         [
