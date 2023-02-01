@@ -1,5 +1,4 @@
 module.exports = {
-    title: "风和日暖，令人愿意永远活下去",
     theme: "reco",
     base: "/",
     head: [
@@ -9,10 +8,14 @@ module.exports = {
         //移动端优化
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
-        ['meta', {name: 'keywords', content: 'JohnsonXin,博客'}],
+        ['meta', {name: 'keywords', content: 'JohnsonXin,博客,vuepress,个人博客'}],
     ],
-    locale: {
-        lang: "zh-CN",
+    locales: {
+        "/": {
+            lang: "zh-CN",
+            title: "风和日暖，令人愿意永远活下去",
+            description: "JohnsonXin的个人博客"
+        }
     },
     themeConfig: {
         type: "blog",
@@ -20,7 +23,7 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         // 最后更新时间
-        lastUpdated: 'Last Updated',
+        lastUpdated: '上次更新',
         logo: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
         authorAvatar: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
         // 作者
@@ -32,7 +35,7 @@ module.exports = {
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "关于", link: "/about/", icon: "reco-account"},
             {
-                text: "JohnsonXin 的小站",
+                text: "JohnsonXin的小站",
                 items: [{text: "掘金", link: "https://juejin.cn/user/2573324506368663"}, {
                     text: "GitHub",
                     link: "https://github.com/CodeGetters"
@@ -79,13 +82,12 @@ module.exports = {
                 // 在导航栏菜单中所占的位置，默认4
                 location: 4,
                 // 默认文案 “标签”
-                text: "Tag",
+                text: "标签",
             },
         },
     },
     markdown: {
         lineNumbers: true,
-
     },
     plugins: [
         [
