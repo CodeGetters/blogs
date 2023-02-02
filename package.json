@@ -22,6 +22,8 @@
   "author": "Johnson Xin <2775145275@qq.com>",
   "license": "MIT",
   "dependencies": {
+    "jquery": "^3.6.3",
+    "vue-router": "^4.1.6",
     "vuepress-theme-reco": "^1.6.16"
   }
 }
