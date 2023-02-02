@@ -40,7 +40,8 @@ module.exports = {
             notify: true,
             //验证码
             verify: true,
-            recordIP: true
+            recordIP: true,
+            visitor: true
         },
         nav: [
             {text: "首页", link: "/", icon: "reco-home"},
