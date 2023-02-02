@@ -10,8 +10,8 @@ module.exports = {
         //搜索关键字
         ['meta', {name: 'keywords', content: 'JohnsonXin,博客,vuepress,个人博客'}],
         //pwa
-        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
+        ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
     ],
     locales: {
         "/": {
@@ -32,8 +32,18 @@ module.exports = {
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
+        valineConfig: {
+            appId: 'sEH0f9Yv07EJH6PJX5VPpApE-gzGzoHsz',
+            appKey: 'HFSmme1Q9TsSXSwEsl1tNDnK',
+            placeholder: '在这里留下你的足迹吧！',
+            //邮件提醒
+            notify: true,
+            //验证码
+            verify: true,
+            recordIP: true
+        },
         nav: [
-            {text: "首页", link: "/",icon: "reco-home"},
+            {text: "首页", link: "/", icon: "reco-home"},
             {text: '笔记', link: '/note/', icon: 'reco-document'},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "关于", link: "/about/", icon: "reco-account"},
@@ -184,23 +194,23 @@ module.exports = {
                 theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
             }
         ],
-        [
-            //评论
-            'vuepress-plugin-comment',
-            {
-                choosen: 'valine',
-                // options选项中的所有参数，会传给Valine的配置
-                options: {
-                    el: '#valine-vuepress-comment',
-                    appId: 'sEH0f9Yv07EJH6PJX5VPpApE-gzGzoHsz',
-                    appKey: 'HFSmme1Q9TsSXSwEsl1tNDnK',
-                    avatar: "retro",
-                    placeholder: "在这里留下你的足迹吧！",
-                    enableQQ: true,
-                    //serverURLs:"https://leanserver.reday.asia"
-                }
-            }
-        ],
+        //[
+        //    //评论
+        //    'vuepress-plugin-comment',
+        //    {
+        //        choosen: 'valine',
+        //        // options选项中的所有参数，会传给Valine的配置
+        //        options: {
+        //            el: '#valine-vuepress-comment',
+        //            appId: 'sEH0f9Yv07EJH6PJX5VPpApE-gzGzoHsz',
+        //            appKey: 'HFSmme1Q9TsSXSwEsl1tNDnK',
+        //            avatar: "retro",
+        //            placeholder: "在这里留下你的足迹吧！",
+        //            enableQQ: true,
+        //            //serverURLs:"https://leanserver.reday.asia"
+        //        }
+        //    }
+        //],
         [
             '@vuepress/pwa',
             {
