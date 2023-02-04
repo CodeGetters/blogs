@@ -8,10 +8,11 @@ module.exports = {
         //移动端优化
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
-        ['meta', {name: 'keywords', content: 'JohnsonXin,博客,vuepress,个人博客'}],
+        ['meta', {name: 'keywords', content: 'JohnsonXin,博客,vuepress,个人博客,reday'}],
         //pwa
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
+
     ],
     locales: {
         "/": {
@@ -27,8 +28,8 @@ module.exports = {
         searchMaxSuggestions: 10,
         // 最后更新时间
         lastUpdated: '上次更新',
-        logo: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
-        authorAvatar: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/avatar.jpg",
+        logo: "https://p3-passport.byteimg.com/img/user-avatar/6133eb6b49b7709241a07379f7f509c0~180x180.awebp",
+        authorAvatar: "https://p3-passport.byteimg.com/img/user-avatar/6133eb6b49b7709241a07379f7f509c0~180x180.awebp",
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
