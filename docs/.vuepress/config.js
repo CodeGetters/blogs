@@ -48,7 +48,7 @@ module.exports = {
             {text: "首页", link: "/", icon: "reco-home"},
             {text: '笔记', link: '/note/', icon: 'reco-document'},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
-            {text: "关于", link: "/about/", icon: "reco-account"},
+            {text: "关于我", link: "/about/", icon: "reco-account"},
             {
                 text: "JohnsonXin的小站",
                 items: [{text: "掘金", link: "https://juejin.cn/user/2573324506368663"}, {
