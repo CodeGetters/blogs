@@ -2,7 +2,7 @@ module.exports = {
     theme: "reco",
     base: "/",
     head: [
-        ["link", {rel: "icon", href: "https://cdn.jsdelivr.net/gh/CodeGetters/blogs-cdn/images/00.ico"},],
+        ["link", {rel: "icon", href: "http://cdn.reday.asia/img/202302121649408.ico"},],
         //pwa
         ['link', {rel: 'manifest', href: '/manifest.json'}],
         //移动端优化
@@ -28,8 +28,8 @@ module.exports = {
         searchMaxSuggestions: 10,
         // 最后更新时间
         lastUpdated: '上次更新',
-        logo: "https://p3-passport.byteimg.com/img/user-avatar/6133eb6b49b7709241a07379f7f509c0~180x180.awebp",
-        authorAvatar: "https://p3-passport.byteimg.com/img/user-avatar/6133eb6b49b7709241a07379f7f509c0~180x180.awebp",
+        logo: "http://cdn.reday.asia/img/202302121650663.awebp",
+        authorAvatar: "http://cdn.reday.asia/img/202302121650663.awebp",
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
@@ -137,7 +137,7 @@ module.exports = {
                         name: "萤火之森",
                         artist: "CMJ",
                         url: "https://assets.smallsunnyfox.com/music/3.mp3",
-                        cover: "https://assets.smallsunnyfox.com/music/3.jpg"
+                        cover: "http://cdn.reday.asia/img/202302121653293.jpg"
 
                     },
                     {
@@ -148,7 +148,7 @@ module.exports = {
                     },
                 ],
                 // 是否默认缩小
-                autoShrink: true,
+                autoShrink: false,
                 // 缩小时缩为哪种模式
                 shrinkMode: "float",
                 // 悬浮窗样式

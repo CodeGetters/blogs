@@ -239,8 +239,12 @@ git commit -m 'info'
 git push
 ```
 
-##16.退出`git log`
+## 16.退出`git log`
 英文状态下按q ,即可退出
 
+## 17.删除本地分支
+```shell
+git branch -d branchName
+```
 ## 怎么PR
 [如何在github上提交PR](https://cloud.tencent.com/developer/article/1999727)
