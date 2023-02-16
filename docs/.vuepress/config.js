@@ -30,10 +30,10 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         // 备案
-        // record: 'ICP 备案文案',
-        // recordLink: 'ICP 备案指向链接',
-        // cyberSecurityRecord: '公安部备案文案',
-        // cyberSecurityLink: '公安部备案指向链接',
+        record: '黔ICP备2023000823号',
+        recordLink: 'https://beian.miit.gov.cn/',
+        //cyberSecurityRecord: '公安部备案文案',
+        //cyberSecurityLink: 'https://www.beian.gov.cn/portal/registerSystemInfo?',
         // 最后更新时间
         lastUpdated: '上次更新',
         logo: "http://cdn.reday.asia/img/202302121650663.awebp",
@@ -89,11 +89,6 @@ module.exports = {
                     collapse: true,
                     children: ['js/01']
                 },
-                //{
-                //    title: "Vue",
-                //    collapse: true,
-                //    children: ["vue/01"]
-                //},
                 {
                     title: "博客",
                     collapse: true,
@@ -117,110 +112,109 @@ module.exports = {
             markdown: {
                 lineNumbers: true,
             }
-            ,
-            plugins: [
-                [
-                    "sakura",
-                    {
-                        // 默认数量
-                        num: 20,
-                        //  是否显示
-                        show: true,
-                        // 层级
-                        zIndex: -1,
-                        img: {
-                            // false 默认图 true 换图 需要填写httpUrl地址
-                            replace: false,
-                        },
-                    },
-                ],
-                [
-                    "cursor-effects",
-                    {
-                        size: 4, // size of the particle, default: 2
-                        shape: "star", // ['star' | 'circle'], // shape of the particle, default: 'star'
-                        zIndex: 999999999, // z-index property of the canvas, default: 999999999
-                    },
-                ],
-                [
-                    //音乐播放器
-                    "@vuepress-reco/vuepress-plugin-bgm-player",
-                    {
-                        audios: [
-                            {
-                                name: "萤火之森",
-                                artist: "CMJ",
-                                url: "https://assets.smallsunnyfox.com/music/3.mp3",
-                                cover: "http://cdn.reday.asia/img/202302121653293.jpg"
-
-                            },
-                            {
-                                name: "我再没见过 像你一般的星空",
-                                artist: "Seto",
-                                url: "https://assets.smallsunnyfox.com/music/2.mp3",
-                                cover: "https://assets.smallsunnyfox.com/music/2.jpg"
-                            },
-                        ],
-                        // 是否默认缩小
-                        autoShrink: false,
-                        // 缩小时缩为哪种模式
-                        shrinkMode: "float",
-                        // 悬浮窗样式
-                        floatStyle: {bottom: "20px", "z-index": "999999"},
-                        //自动播放
-                        autoplay: true
-                    },
-                ],
-                [
-                    //百度统计
-                    'vuepress-plugin-baidu-tongji',
-                    {
-                        hm: "2465e092f70686717972961b02e1076a"
-                    }
-                ],
-                //页面切换进度条
-                '@vuepress/plugin-nprogress',
-                [
-                    //点击复制代码
-                    'one-click-copy',
-                    {
-                        copySelector: [
-                            'div[class*="language-"] pre',
-                            'div[class*="aside-code"] aside',
-                        ],
-                        copyMessage: '复制成功',
-                        duration: 1000,
-                        showInMobile: false,
-                    }
-                ],
-                [
-                    //著作权信息
-                    'copyright',
-                    {
-                        // 选中的文字将无法被复制
-                        authorName: 'JohnsonXin',
-                        // 如果长度超过  20 个字符
-                        minLength: 20,
-                    },
-                ],
-                [
-                    //看板娘
-                    '@vuepress-reco/vuepress-plugin-kan-ban-niang',
-                    {
-                        theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
-                    }
-                ],
-                [
-                    '@vuepress/pwa',
-                    {
-                        serviceWorker: true,
-                        updatePopup: {
-                            message: '发现新内容可用',
-                            buttonText: '刷新'
-                        }
-                    }
-                ]
-            ]
         }
-    }
+    },
+    plugins: [
+        [
+            "sakura",
+            {
+                // 默认数量
+                num: 20,
+                //  是否显示
+                show: true,
+                // 层级
+                zIndex: -1,
+                img: {
+                    // false 默认图 true 换图 需要填写httpUrl地址
+                    replace: false,
+                },
+            },
+        ],
+        [
+            "cursor-effects",
+            {
+                size: 4, // size of the particle, default: 2
+                shape: "star", // ['star' | 'circle'], // shape of the particle, default: 'star'
+                zIndex: 999999999, // z-index property of the canvas, default: 999999999
+            },
+        ],
+        [
+            //音乐播放器
+            "@vuepress-reco/vuepress-plugin-bgm-player",
+            {
+                audios: [
+                    {
+                        name: "萤火之森",
+                        artist: "CMJ",
+                        url: "https://assets.smallsunnyfox.com/music/3.mp3",
+                        cover: "http://cdn.reday.asia/img/202302121653293.jpg"
+
+                    },
+                    {
+                        name: "我再没见过 像你一般的星空",
+                        artist: "Seto",
+                        url: "https://assets.smallsunnyfox.com/music/2.mp3",
+                        cover: "https://assets.smallsunnyfox.com/music/2.jpg"
+                    },
+                ],
+                // 是否默认缩小
+                autoShrink: false,
+                // 缩小时缩为哪种模式
+                shrinkMode: "float",
+                // 悬浮窗样式
+                floatStyle: {bottom: "20px", "z-index": "999999"},
+                //自动播放
+                autoplay: true
+            },
+        ],
+        [
+            //百度统计
+            'vuepress-plugin-baidu-tongji',
+            {
+                hm: "2465e092f70686717972961b02e1076a"
+            }
+        ],
+        //页面切换进度条
+        '@vuepress/plugin-nprogress',
+        [
+            //点击复制代码
+            'one-click-copy',
+            {
+                copySelector: [
+                    'div[class*="language-"] pre',
+                    'div[class*="aside-code"] aside',
+                ],
+                copyMessage: '复制成功',
+                duration: 1000,
+                showInMobile: false,
+            }
+        ],
+        [
+            //著作权信息
+            'copyright',
+            {
+                // 选中的文字将无法被复制
+                authorName: 'JohnsonXin',
+                // 如果长度超过  20 个字符
+                minLength: 20,
+            },
+        ],
+        [
+            //看板娘
+            '@vuepress-reco/vuepress-plugin-kan-ban-niang',
+            {
+                theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
+            }
+        ],
+        [
+            '@vuepress/pwa',
+            {
+                serviceWorker: true,
+                updatePopup: {
+                    message: '发现新内容可用',
+                    buttonText: '刷新'
+                }
+            }
+        ]
+    ]
 }
