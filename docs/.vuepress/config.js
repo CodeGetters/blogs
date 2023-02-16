@@ -5,7 +5,7 @@ module.exports = {
     //抛弃ie，减少打包时间和文件体积
     //evergreen:true,
     head: [
-        ["link", {rel: "icon", href: "http://cdn.reday.asia/images/202302161419177.ico"},],
+        ["link", {rel: "icon", href: "https://txy.reday.asia/images/202302161730906.ico"},],
         //移动端优化
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
@@ -34,8 +34,8 @@ module.exports = {
         //cyberSecurityLink: 'https://www.beian.gov.cn/portal/registerSystemInfo?',
         // 最后更新时间
         lastUpdated: '上次更新',
-        logo: "http://cdn.reday.asia/images/202302161506345.jpg",
-        authorAvatar: "http://cdn.reday.asia/images/202302161506345.jpg",
+        logo: "https://txy.reday.asia/images/202302161730107.jpg",
+        authorAvatar: "https://txy.reday.asia/images/202302161730107.jpg",
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
@@ -125,7 +125,7 @@ module.exports = {
                         name: "萤火之森",
                         artist: "CMJ",
                         url: "https://assets.smallsunnyfox.com/music/3.mp3",
-                        cover: "http://cdn.reday.asia/images/202302161502497.jpg"
+                        cover: "https://txy.reday.asia/images/202302161730108.jpg"
 
                     },
                     {
