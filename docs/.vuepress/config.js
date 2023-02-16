@@ -5,9 +5,7 @@ module.exports = {
     //抛弃ie，增加打包速度
     //evergreen:true,
     head: [
-        ["link", {rel: "icon", href: "http://cdn.reday.asia/img/202302121649408.ico"},],
-        //pwa
-        ['link', {rel: 'manifest', href: '/manifest.json'}],
+        ["link", {rel: "icon", href: "http://cdn.reday.asia/images/202302161419177.ico"},],
         //移动端优化
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
@@ -15,7 +13,7 @@ module.exports = {
         //pwa
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
-
+        ['link', {rel: 'manifest', href: '/manifest.json'}],
     ],
     locales: {
         "/": {
@@ -36,8 +34,8 @@ module.exports = {
         //cyberSecurityLink: 'https://www.beian.gov.cn/portal/registerSystemInfo?',
         // 最后更新时间
         lastUpdated: '上次更新',
-        logo: "http://cdn.reday.asia/img/202302121650663.awebp",
-        authorAvatar: "http://cdn.reday.asia/img/202302121650663.awebp",
+        logo: "http://cdn.reday.asia/images/202302161506345.jpg",
+        authorAvatar: "http://cdn.reday.asia/images/202302161506345.jpg",
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
@@ -147,7 +145,7 @@ module.exports = {
                         name: "萤火之森",
                         artist: "CMJ",
                         url: "https://assets.smallsunnyfox.com/music/3.mp3",
-                        cover: "http://cdn.reday.asia/img/202302121653293.jpg"
+                        cover: "http://cdn.reday.asia/images/202302161502497.jpg"
 
                     },
                     {
