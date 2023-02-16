@@ -2,12 +2,10 @@
 title: 使用vuepress打造属于自己的博客🔥
 date: 2023-2-24
 categories:
-  - 教程
+- 教程
 tags:
-  - vuepress
-  - 博客
-footer: MIT Licensed | Copyright © 2018-present Evan You
-
+- vuepress
+- 博客
 ---
 
 # 建站历程

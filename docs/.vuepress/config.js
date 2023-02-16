@@ -2,12 +2,10 @@ module.exports = {
     theme: "reco",
     base: "/",
     port: 3000,
-    //抛弃ie，增加打包速度
+    //抛弃ie，减少打包时间和文件体积
     //evergreen:true,
     head: [
-        ["link", {rel: "icon", href: "http://cdn.reday.asia/img/202302121649408.ico"},],
-        //pwa
-        ['link', {rel: 'manifest', href: '/manifest.json'}],
+        ["link", {rel: "icon", href: "http://cdn.reday.asia/images/202302161419177.ico"},],
         //移动端优化
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
@@ -15,7 +13,7 @@ module.exports = {
         //pwa
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
-
+        ['link', {rel: 'manifest', href: '/manifest.json'}],
     ],
     locales: {
         "/": {
@@ -36,8 +34,8 @@ module.exports = {
         //cyberSecurityLink: 'https://www.beian.gov.cn/portal/registerSystemInfo?',
         // 最后更新时间
         lastUpdated: '上次更新',
-        logo: "http://cdn.reday.asia/img/202302121650663.awebp",
-        authorAvatar: "http://cdn.reday.asia/img/202302121650663.awebp",
+        logo: "http://cdn.reday.asia/images/202302161506345.jpg",
+        authorAvatar: "http://cdn.reday.asia/images/202302161506345.jpg",
         // 作者
         author: "JohnsonXin",
         startYear: "2023",
@@ -54,7 +52,17 @@ module.exports = {
         },
         nav: [
             {text: "首页", link: "/", icon: "reco-home"},
-            {text: '笔记', link: '/blogs/', icon: 'reco-document'},
+            {
+                text: '笔记',
+                icon: 'reco-document',
+                items: [
+                    {text:'HTML',link:"/blogs/html/01"},
+                    {text:"CSS",link:"blogs/css/01"},
+                    {text:"JS",link:"blogs/js/01"},
+                    {text:"多人协作",link:"blogs/cooperation/01Git"},
+                    {text:"博客",link:"blogs/useBlog/01使用vuepress打造属于自己的博客"},
+                ]
+            },
             {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"},
@@ -67,40 +75,10 @@ module.exports = {
             },
         ],
         //自动形成侧边栏
-        //subSidebar: "auto",
+        subSidebar: "auto",
         sidebarDepth: 1,
         //显示所有页面的标题链接
         displayAllHeaders: false,
-        sidebar: {
-            "/blogs/": [
-                {
-                    title: "HTML",
-                    collapse: true,
-                    children: ['html/01', 'html/02']
-                },
-                {
-                    title: "CSS",
-                    collapse: true,
-                    children: ['css/01']
-                },
-
-                {
-                    title: "JS",
-                    collapse: true,
-                    children: ['js/01']
-                },
-                {
-                    title: "博客",
-                    collapse: true,
-                    children: ['useBlog/01使用vuepress打造属于自己的博客']
-                },
-                {
-                    title: "协作",
-                    collapse: true,
-                    children: ['cooperation/01Git']
-                }
-            ]
-        },
         // 博客配置
         blogConfig: {
             category: {
@@ -147,7 +125,7 @@ module.exports = {
                         name: "萤火之森",
                         artist: "CMJ",
                         url: "https://assets.smallsunnyfox.com/music/3.mp3",
-                        cover: "http://cdn.reday.asia/img/202302121653293.jpg"
+                        cover: "http://cdn.reday.asia/images/202302161502497.jpg"
 
                     },
                     {
