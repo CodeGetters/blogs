@@ -4,4 +4,4 @@ publish: false
 sidebar: false
 ---
 
-<friendLinks/>
+<friendLink/>

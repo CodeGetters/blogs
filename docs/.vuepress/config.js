@@ -5,11 +5,11 @@ module.exports = {
     //抛弃ie，减少打包时间和文件体积
     //evergreen:true,
     head: [
-        ["link", {rel: "icon", href: "https://txy.reday.asia/images/202302161730906.ico"},],
+        ["link", {rel: "icon", href: "./public/icon.ico"}],
         //移动端优化
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
-        ['meta', {name: 'keywords', content: 'JohnsonXin,useBlog,vuepress,个人博客,reday'}],
+        ['meta', {name: 'keywords', content: 'JohnsonXin,useBlog,vuepress,个人博客,reday,博客'}],
         //pwa
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
@@ -44,7 +44,7 @@ module.exports = {
             appKey: 'HFSmme1Q9TsSXSwEsl1tNDnK',
             placeholder: '在昵称处输入QQ号可自动获取QQ头像哦~',
             //昵称框自动获取qq昵称和qq头像
-            enableQQ:true,
+            enableQQ: true,
             //验证码
             verify: true,
             //记录评论者IP
@@ -52,10 +52,10 @@ module.exports = {
             //文章访问量统计
             visitor: true,
             //Gravatar头像展示方式
-            avatar:"mp",
+            avatar: "mp",
             emojiCDN: '//i0.hdslb.com/bfs/emote/',
             //必填项
-            requiredFields:['nick','mail'],
+            requiredFields: ['nick', 'mail'],
             // 表情title和图片映射
             emojiMaps: {
                 "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
@@ -116,11 +116,11 @@ module.exports = {
                 text: '笔记',
                 icon: 'reco-document',
                 items: [
-                    {text:'HTML',link:"/blogs/html/01"},
-                    {text:"CSS",link:"blogs/css/01"},
-                    {text:"JS",link:"blogs/js/01"},
-                    {text:"多人协作",link:"blogs/cooperation/01Git"},
-                    {text:"博客",link:"blogs/useBlog/01使用vuepress打造属于自己的博客"},
+                    {text: 'HTML', link: "/blogs/html/01"},
+                    {text: "CSS", link: "blogs/css/01"},
+                    {text: "JS", link: "blogs/js/01"},
+                    {text: "多人协作", link: "blogs/cooperation/01Git"},
+                    {text: "博客", link: "blogs/useBlog/01使用vuepress打造属于自己的博客"},
                 ]
             },
             {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
@@ -214,6 +214,8 @@ module.exports = {
         ],
         //页面切换进度条
         '@vuepress/plugin-nprogress',
+        //图片放大
+        '@vuepress/medium-zoom',
         [
             //点击复制代码
             'one-click-copy',
@@ -249,10 +251,18 @@ module.exports = {
             {
                 serviceWorker: true,
                 updatePopup: {
-                    message: '发现新内容可用',
+                    message: '博主已经更新内容了，刷新一下吧~',
                     buttonText: '刷新'
                 }
             }
-        ]
+        ],
+        [
+            // 注册组件的插件
+            '@vuepress/register-components',
+            {
+                //在这个目录下的所有组件将会被注册为全局组件，组件的命名将遵循在 .vuepress/components中找到的组件的命名
+                componentsDir: 'components'
+            }
+        ],
     ]
 }
