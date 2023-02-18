@@ -1673,6 +1673,14 @@
   dependencies:
     medium-zoom "^1.0.4"
 
+"@vuepress/plugin-medium-zoom@^1.9.8":
+  version "1.9.8"
+  resolved "https://registry.npmmirror.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.9.8.tgz#d90b141cf94e441d50b78d37d2ad55c9135d7d2b"
+  integrity sha512-qs7N8w/48d6t8fYXa/0QUyaGnZAWjZdLfk+5AwBaS7iub2kIFHRI1bs7yBgUmuCo7CFAltMuD46HZJIug6xg0w==
+  dependencies:
+    "@vuepress/types" "1.9.8"
+    medium-zoom "^1.0.4"
+
 "@vuepress/plugin-nprogress@1.9.8", "@vuepress/plugin-nprogress@^1.9.8":
   version "1.9.8"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-nprogress/-/plugin-nprogress-1.9.8.tgz#78132a59c1139d9a225441fa69e4af82d0ffe945"
@@ -1691,7 +1699,7 @@
     register-service-worker "^1.7.0"
     workbox-build "^4.3.1"
 
-"@vuepress/plugin-register-components@1.9.8":
+"@vuepress/plugin-register-components@1.9.8", "@vuepress/plugin-register-components@^1.9.8":
   version "1.9.8"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-register-components/-/plugin-register-components-1.9.8.tgz#fea0a86c49e32f77585b86e10b7713a24cd254d7"
   integrity sha512-TPa+HDKSevhXKvAh7zboGlGCaGXY/vzx/b7YtHzxKwHJE3Orj/aGNimG8ZvILjDXhzmrPCX+WghquiwYeco5Nw==
