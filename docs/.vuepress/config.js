@@ -5,7 +5,7 @@ module.exports = {
     //抛弃ie，减少打包时间和文件体积
     //evergreen:true,
     head: [
-        ["link", {rel: "icon", href: "./public/icon.ico"}],
+        ["link", {rel: "icon", href: "/favicon.ico"}],
         //移动端优化
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
         //搜索关键字
