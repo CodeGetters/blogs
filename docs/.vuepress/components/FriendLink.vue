@@ -32,13 +32,6 @@ export default {
   }
 }
 </script>
-<!--<script setup>-->
-<!--const title = '叫我詹躲躲'-->
-<!--const desc = '岂能尽如人意，但求无愧于心'-->
-<!--const avatar = 'https://zhanhongzhu.top/avatar.jpg'-->
-<!--const link = 'https://zhanhongzhu.top'-->
-
-<!--</script>-->
 
 <style scoped>
 .item {
