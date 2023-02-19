@@ -256,13 +256,13 @@ module.exports = {
                 }
             }
         ],
-        [
-            // 注册组件的插件
-            '@vuepress/register-components',
-            {
-                //在这个目录下的所有组件将会被注册为全局组件，组件的命名将遵循在 .vuepress/components中找到的组件的命名
-                componentsDir: 'components'
-            }
-        ],
+        //[
+        //    // 注册组件的插件
+        //    '@vuepress/register-components',
+        //    {
+        //        //在这个目录下的所有组件将会被注册为全局组件，组件的命名将遵循在 .vuepress/components中找到的组件的命名
+        //        componentsDir: 'components'
+        //    }
+        //],
     ]
 }
