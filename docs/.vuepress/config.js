@@ -126,13 +126,13 @@ module.exports = {
             {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"},
-            {
-                text: "小站",
-                items: [
-                    {text: "掘金", link: "https://juejin.cn/user/2573324506368663"},
-                    {text: "GitHub", link: "https://github.com/CodeGetters"}
-                ]
-            },
+            //{
+            //    text: "小站",
+            //    items: [
+            //        {text: "掘金", link: "https://juejin.cn/user/2573324506368663"},
+            //        {text: "GitHub", link: "https://github.com/CodeGetters"}
+            //    ]
+            //},
         ],
         //自动形成侧边栏
         subSidebar: "auto",
@@ -149,7 +149,14 @@ module.exports = {
             },
             markdown: {
                 lineNumbers: true,
-            }
+            },
+            socialLinks:[
+                {icon:'reco-wechat',link:"https://txy.reday.asia/images/202302191652771.png"},
+                {icon:'reco-github',link:"https://github.com/CodeGetters"},
+                {icon:'reco-juejin',link:"https://juejin.cn/user/2573324506368663"},
+                {icon:'reco-mail',link:"mailto:yuanxin0521@qq.com"},
+
+            ]
         }
     },
     plugins: [
