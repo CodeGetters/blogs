@@ -10,11 +10,13 @@
           <img alt="snake" src="https://txy.reday.asia/images/202302181234636.svg">
         </div>
       </div>
+      <reward/>
     </a>
   </div>
 </template>
 
 <script setup>
+import Reward from "./reward.vue";
 
 </script>
 

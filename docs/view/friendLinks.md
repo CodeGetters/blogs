@@ -4,15 +4,13 @@ publish: false
 sidebar: false
 ---
 
-<friendLink/>
+
+<MyLinks/>
 
 ## 友链申请
 
-通过 <a href="mailto:yuanxin0521@qq.com">邮箱</a> 与我联系或者在本页面评论区留言您的友链信息，格式：
-
-
+通过 <a href="mailto:yuanxin0521@qq.com">yuanxin0521@qq.com</a> 与我联系或者在本页面评论区留言您的友链信息，格式：
 ```markdown
-
 - name: JohnsonXin # 昵称
 
   desc: 风和日暖令人愿意永远活下去 # 介绍
@@ -20,8 +18,6 @@ sidebar: false
   avatar: https://p3-passport.byteimg.com/img/user-avatar/6133eb6b49b7709241a07379f7f509c0~180x180.awebp # 头像
 
   link: https://reday.asia # 链接
-
 ```
-
 
 申请前记得先添加本站哦~
