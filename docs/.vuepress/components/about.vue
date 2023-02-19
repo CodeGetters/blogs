@@ -10,6 +10,7 @@
           <img alt="snake" src="https://txy.reday.asia/images/202302181234636.svg">
         </div>
       </div>
+      <br/>
       <reward/>
     </a>
   </div>
@@ -17,11 +18,9 @@
 
 <script setup>
 import Reward from "./reward.vue";
-
 </script>
 
 <style scoped>
-
 .light .dark-snk{
   display: none;
 }

@@ -53,6 +53,7 @@ module.exports = {
             visitor: true,
             //Gravatar头像展示方式
             avatar: "mp",
+            //表情CDN
             emojiCDN: '//i0.hdslb.com/bfs/emote/',
             //必填项
             requiredFields: ['nick', 'mail'],

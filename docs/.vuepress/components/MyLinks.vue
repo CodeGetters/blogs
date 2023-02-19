@@ -6,12 +6,11 @@
                 :desc="item.desc"
                 :link="item.link"
                 :avatar="item.avatar"
-    ></FriendLink>
+    />
   </div>
 </template>
 
 <script setup>
-
 import FriendLink from "./FriendLink.vue";
 
 const friendLinks = [
@@ -27,7 +26,6 @@ const friendLinks = [
     avatar: 'http://ssw.fit/free/vehicle.png',
     link: 'http://ssw.fit',
   },
-
 ]
 </script>
 
@@ -39,5 +37,4 @@ const friendLinks = [
   margin: auto;
   height: auto;
 }
-
 </style>
