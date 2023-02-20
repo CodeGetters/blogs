@@ -6,10 +6,10 @@
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.4",
     "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
-    "@vuepress/plugin-medium-zoom": "^1.9.8",
     "@vuepress/plugin-nprogress": "^1.9.8",
     "@vuepress/plugin-pwa": "^1.9.8",
     "@vuepress/plugin-register-components": "^1.9.8",
+    "sitemap": "^7.1.1",
     "vuepress": "^1.9.8",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-comment": "^0.7.3",
