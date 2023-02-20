@@ -151,11 +151,11 @@ module.exports = {
             markdown: {
                 lineNumbers: true,
             },
-            socialLinks:[
-                {icon:'reco-wechat',link:"https://txy.reday.asia/images/202302191652771.png"},
-                {icon:'reco-github',link:"https://github.com/CodeGetters"},
-                {icon:'reco-juejin',link:"https://juejin.cn/user/2573324506368663"},
-                {icon:'reco-mail',link:"mailto:yuanxin0521@qq.com"},
+            socialLinks: [
+                {icon: 'reco-wechat', link: "https://txy.reday.asia/images/202302191652771.png"},
+                {icon: 'reco-github', link: "https://github.com/CodeGetters"},
+                {icon: 'reco-juejin', link: "https://juejin.cn/user/2573324506368663"},
+                {icon: 'reco-mail', link: "mailto:yuanxin0521@qq.com"},
 
             ]
         }
@@ -222,8 +222,6 @@ module.exports = {
         ],
         //页面切换进度条
         '@vuepress/plugin-nprogress',
-        //图片放大
-        '@vuepress/medium-zoom',
         [
             //点击复制代码
             'one-click-copy',
@@ -262,6 +260,12 @@ module.exports = {
                     message: '博主已经更新内容了，刷新一下吧~',
                     buttonText: '刷新'
                 }
+            }
+        ],
+        [
+            'sitemap',
+            {
+                hostname: "https://reday.asia"
             }
         ],
         //[
