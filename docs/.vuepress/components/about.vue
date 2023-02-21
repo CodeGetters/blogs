@@ -10,9 +10,9 @@
           <img alt="snake" src="https://txy.reday.asia/images/202302181234636.svg">
         </div>
       </div>
-      <br/>
-      <reward/>
     </a>
+    <br>
+    <reward/>
   </div>
 </template>
 
