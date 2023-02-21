@@ -262,12 +262,6 @@ module.exports = {
                 }
             }
         ],
-        [
-            'sitemap',
-            {
-                hostname: "https://reday.asia"
-            }
-        ],
         //[
         //    // 注册组件的插件
         //    '@vuepress/register-components',
