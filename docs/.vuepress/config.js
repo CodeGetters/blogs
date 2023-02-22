@@ -14,6 +14,8 @@ module.exports = {
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
         ['link', {rel: 'manifest', href: '/manifest.json'}],
+        ['link', {rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3"}],
+        ['script', {src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3"}],
     ],
     locales: {
         "/": {
