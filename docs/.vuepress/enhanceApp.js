@@ -1,3 +1,4 @@
+// algolia 搜索
 export default ({ router, Vue, isServer }) => {
     Vue.mixin({
         mounted() {

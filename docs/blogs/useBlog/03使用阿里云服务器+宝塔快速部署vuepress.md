@@ -6,6 +6,7 @@ categories:
 tags:
 - 博客
 prev: ./02PicGo+腾讯云搭建图床
+next: ./04添加搜索功能
 ---
 
 [[toc]]
@@ -129,6 +130,5 @@ yarn docs:build
 
 ![](https://txy.reday.asia/images/202302192124117.png)
 
-好了，到这里我们的教程已经结束了，如果这篇教程对你有帮助，可以考虑请我喝杯奶茶~毕竟创作不易哈哈哈
 
 <reward/>

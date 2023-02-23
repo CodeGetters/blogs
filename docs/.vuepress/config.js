@@ -129,13 +129,7 @@ module.exports = {
             {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"},
-            //{
-            //    text: "小站",
-            //    items: [
-            //        {text: "掘金", link: "https://juejin.cn/user/2573324506368663"},
-            //        {text: "GitHub", link: "https://github.com/CodeGetters"}
-            //    ]
-            //},
+            {text: "面包屋",link:"/books/面包屋.html",icon:'reco-other'},
         ],
         //自动形成侧边栏
         subSidebar: "auto",
@@ -260,17 +254,9 @@ module.exports = {
                 serviceWorker: true,
                 updatePopup: {
                     message: '博主已经更新内容了，刷新一下吧~',
-                    buttonText: '刷新'
+                    buttonText: '刷新一下~'
                 }
             }
-        ],
-        //[
-        //    // 注册组件的插件
-        //    '@vuepress/register-components',
-        //    {
-        //        //在这个目录下的所有组件将会被注册为全局组件，组件的命名将遵循在 .vuepress/components中找到的组件的命名
-        //        componentsDir: 'components'
-        //    }
-        //],
+        ]
     ]
 }
