@@ -128,8 +128,16 @@ module.exports = {
             },
             {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
-            {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"},
             {text: "面包屋", link: "/books/目录.html", icon: 'reco-other'},
+            {
+                text: "面面面",
+                icon: 'reco-three',
+                items: [
+                    {text: "LeetCode题解",link:"/interview/leetcode/目录.html"},
+                    {text: "面经",link:"/interview/moreau/目录.html"}
+                ]
+            },
+            {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"}
         ],
         //自动形成侧边栏
         subSidebar: "auto",
