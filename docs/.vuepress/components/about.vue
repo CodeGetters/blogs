@@ -16,8 +16,15 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import Reward from "./reward.vue";
+
+export default {
+  name:"about",
+  setup(){
+    return{Reward}
+  }
+}
 </script>
 
 <style scoped>

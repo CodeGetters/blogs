@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .item {
-  width: 50%;
+  width: 33.3%;
   height: 8rem;
 }
 
