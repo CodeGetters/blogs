@@ -1,22 +1,28 @@
 <template>
   <div class="footer-wrapper">
-    <span>
-      <reco-icon icon="reco-theme" />
-      <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a>
-    </span>
+
+    <!--皮肤主题-->
+    <!--<span>-->
+    <!--  <reco-icon icon="reco-theme" />-->
+    <!--  <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a>-->
+    <!--</span>-->
+
+    <!--备案信息-->
     <span v-if="$themeConfig.record">
       <reco-icon icon="reco-beian" />
       <a :href="$themeConfig.recordLink || '#'">{{ $themeConfig.record }}</a>
     </span>
+    <!--版权信息-->
     <span>
       <reco-icon icon="reco-copyright" />
       <a>
-        <span v-if="$themeConfig.author || $site.title">{{ $themeConfig.author || $site.title }}</span>
+        <span v-if="$themeConfig.author || $site.title">MIT Licensed | Copyright © 2023-present {{ $themeConfig.author || $site.title }}</span>
         &nbsp;&nbsp;
         <span v-if="$themeConfig.startYear && $themeConfig.startYear != (new Date().getFullYear())">{{ $themeConfig.startYear }} - </span>
         {{ new Date().getFullYear() }}
       </a>
     </span>
+    <!--浏览量-->
     <span v-show="showAccessNumber">
       <reco-icon icon="reco-eye" />
       <AccessNumber idVal="/" />
@@ -44,7 +50,7 @@ export default defineComponent({
 
       const vc = valineLocalConfig || valineConfig
 
-      return vc && vc.visitor != false
+      return vc && vc.visitor !== false
     })
     return { version, showAccessNumber }
   }

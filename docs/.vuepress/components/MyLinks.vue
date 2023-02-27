@@ -17,10 +17,28 @@ export default {
   setup() {
     const friendLinks = [
       {
+        title: 'VuePress',
+        desc: 'Vue 驱动的静态网站生成器',
+        avatar: 'https://v1.vuepress.vuejs.org/hero.png',
+        link: 'https://v1.vuepress.vuejs.org/zh/',
+      },
+      {
+        title: 'VuePress',
+        desc: '一款简洁而优雅的 vuepress 博客&文档 主题',
+        avatar: 'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
+        link: 'https://vuepress-theme-reco.recoluan.com/',
+      },
+      {
         title: 'mumu’s Blog',
         desc: ' 一心一明月，一树一年华',
         avatar: 'https://www.pikamumu.top/logo.png',
         link: 'https://www.pikamumu.top',
+      },
+      {
+        title: '老陈笔记',
+        desc: '一点一滴都是进步',
+        avatar: 'http://www.weblearn.fit/favicon.ico',
+        link: 'http://www.weblearn.fit/'
       }
     ]
     return {friendLinks, FriendLink}
