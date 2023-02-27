@@ -14,8 +14,7 @@
 import FriendLink from "./FriendLink.vue";
 
 export default {
-name:"MyLinks",
-  setup(){
+  setup() {
     const friendLinks = [
       {
         title: 'mumu’s Blog',
@@ -24,7 +23,7 @@ name:"MyLinks",
         link: 'https://www.pikamumu.top',
       }
     ]
-    return{FriendLink,friendLinks}
+    return {friendLinks, FriendLink}
   }
 }
 </script>
