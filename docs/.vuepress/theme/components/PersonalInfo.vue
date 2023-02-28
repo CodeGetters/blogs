@@ -1,5 +1,6 @@
 <template>
 <div class="personal-info-wrapper">
+  <!--头像-->
   <img
     class="personal-img"
     v-if="$themeConfig.authorAvatar"
@@ -12,6 +13,7 @@
   >
     {{ $themeConfig.author || $site.title }}
   </h3>
+  <!--文章和标签数-->
   <div class="num">
     <div>
       <h3>{{$recoPosts.length}}</h3>
@@ -22,6 +24,7 @@
       <h6>{{homeBlogCfg.tag}}</h6>
     </div>
   </div>
+  <!--链接-->
   <ul class="social-links">
     <li
       class="social-item"

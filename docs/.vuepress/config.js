@@ -61,14 +61,13 @@ module.exports = {
                 text: '笔记',
                 icon: 'reco-document',
                 items: [
-                    {text: 'HTML', link: "/blogs/html/01"},
-                    {text: "CSS", link: "blogs/css/01"},
-                    {text: "JS", link: "blogs/js/01"},
-                    {text: "多人协作", link: "blogs/cooperation/01Git"},
-                    {text: "博客", link: "blogs/useBlog/01使用vuepress打造属于自己的博客"},
+                    {text: 'HTML', link: "/blogs/html/01.html"},
+                    {text: "CSS", link: "blogs/css/01.html"},
+                    {text: "JS", link: "blogs/js/01.html"},
+                    {text: "多人协作", link: "blogs/cooperation/01Git.html"},
+                    {text: "博客", link: "blogs/useBlog/01使用vuepress打造属于自己的博客.html"},
                 ]
             },
-            {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "面包屋", link: "/books/目录.html", icon: 'reco-other'},
             {
@@ -79,6 +78,7 @@ module.exports = {
                     {text: "面经", link: "/interview/moreau/目录.html"}
                 ]
             },
+            {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"}
         ],
         // 博客配置

@@ -1,6 +1,6 @@
 <template>
+  <!--页尾-->
   <div class="footer-wrapper">
-
     <!--皮肤主题-->
     <!--<span>-->
     <!--  <reco-icon icon="reco-theme" />-->
@@ -18,7 +18,7 @@
       <a>
         <span v-if="$themeConfig.author || $site.title">MIT Licensed | Copyright © 2023-present {{ $themeConfig.author || $site.title }}</span>
         &nbsp;&nbsp;
-        <span v-if="$themeConfig.startYear && $themeConfig.startYear != (new Date().getFullYear())">{{ $themeConfig.startYear }} - </span>
+        <span v-if="$themeConfig.startYear && $themeConfig.startYear !== (new Date().getFullYear())">{{ $themeConfig.startYear }} - </span>
         {{ new Date().getFullYear() }}
       </a>
     </span>

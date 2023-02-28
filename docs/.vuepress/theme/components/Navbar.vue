@@ -1,4 +1,5 @@
 <template>
+  <!--顶部导航栏整体-->
   <header class="navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 

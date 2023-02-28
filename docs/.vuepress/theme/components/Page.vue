@@ -1,33 +1,38 @@
 <template>
+  <!--文章详细内容-->
   <main class="page" :style="pageStyle">
+    <!--标题-->
     <ModuleTransition>
       <div v-if="recoShowModule && $page.title" class="page-title">
-        <h1 class="title">{{$page.title}}</h1>
+        <h1 class="title">{{ $page.title }}</h1>
         <PageInfo :pageInfo="$page" :showAccessNumber="showAccessNumber"></PageInfo>
       </div>
     </ModuleTransition>
 
+    <!--内容-->
     <ModuleTransition delay="0.08">
-      <Content v-if="recoShowModule" class="theme-reco-content" />
+      <Content v-if="recoShowModule" class="theme-reco-content"/>
     </ModuleTransition>
 
+    <!--页尾编辑区域-->
     <ModuleTransition delay="0.16">
       <footer v-if="recoShowModule" class="page-edit">
         <div
-          class="edit-link"
-          v-if="editLink"
+            class="edit-link"
+            v-if="editLink"
         >
           <a
-            :href="editLink"
-            target="_blank"
-            rel="noopener noreferrer"
+              :href="editLink"
+              target="_blank"
+              rel="noopener noreferrer"
           >{{ editLinkText }}</a>
           <OutboundLink/>
         </div>
 
+        <!--最后更新-->
         <div
-          class="last-updated"
-          v-if="lastUpdated"
+            class="last-updated"
+            v-if="lastUpdated"
         >
           <span class="prefix">{{ lastUpdatedText }}: </span>
           <span class="time">{{ lastUpdated }}</span>
@@ -39,26 +44,26 @@
       <div class="page-nav" v-if="recoShowModule && (prev || next)">
         <p class="inner">
           <span
-            v-if="prev"
-            class="prev"
+              v-if="prev"
+              class="prev"
           >
             ←
             <router-link
-              v-if="prev"
-              class="prev"
-              :to="prev.path"
+                v-if="prev"
+                class="prev"
+                :to="prev.path"
             >
               {{ prev.title || prev.path }}
             </router-link>
           </span>
 
           <span
-            v-if="next"
-            class="next"
+              v-if="next"
+              class="next"
           >
             <router-link
-              v-if="next"
-              :to="next.path"
+                v-if="next"
+                :to="next.path"
             >
               {{ next.title || next.path }}
             </router-link>
@@ -73,58 +78,55 @@
     </ModuleTransition>
 
     <ModuleTransition delay="0.08">
-      <SubSidebar v-if="recoShowModule" class="side-bar" />
+      <SubSidebar v-if="recoShowModule" class="side-bar"/>
     </ModuleTransition>
   </main>
 </template>
 
 <script>
 import PageInfo from '@theme/components/PageInfo'
-import { resolvePage, outboundRE, endingSlashRE } from '@theme/helpers/utils'
-import { ModuleTransition } from '@vuepress-reco/core/lib/components'
+import {endingSlashRE, outboundRE, resolvePage} from '@theme/helpers/utils'
+import {ModuleTransition} from '@vuepress-reco/core/lib/components'
 import SubSidebar from '@theme/components/SubSidebar'
 
 export default {
-  components: { PageInfo, ModuleTransition, SubSidebar },
+  components: {PageInfo, ModuleTransition, SubSidebar},
 
   props: ['sidebarItems'],
 
-  data () {
+  data() {
     return {
       isHasKey: true
     }
   },
 
   computed: {
-    recoShowModule () {
+    recoShowModule() {
       return this.$parent.recoShowModule
     },
     // 是否显示评论
-    shouldShowComments () {
-      const { isShowComments } = this.$frontmatter
-      const { showComment } = this.$themeConfig.valineConfig || { showComment: true }
+    shouldShowComments() {
+      const {isShowComments} = this.$frontmatter
+      const {showComment} = this.$themeConfig.valineConfig || {showComment: true}
       return (showComment !== false && isShowComments !== false) || (showComment === false && isShowComments === true)
     },
-    showAccessNumber () {
+    //是否显示浏览量
+    showAccessNumber() {
       const {
-        $themeConfig: { valineConfig },
-        $themeLocaleConfig: { valineConfig: valineLocalConfig }
+        $themeConfig: {valineConfig},
+        $themeLocaleConfig: {valineConfig: valineLocalConfig}
       } = this
 
       const vc = valineLocalConfig || valineConfig
-      if (vc && vc.visitor != false) {
-        return true
-      }
-      return false
+      return vc && vc.visitor !== false;
     },
-    lastUpdated () {
-      if (!this.$page.lastUpdated){   
+    lastUpdated() {
+      if (!this.$page.lastUpdated) {
         return new Date().toJSON().split('T')[0] // 如果未提交过git，lastUpdated为当前时间
-      }
-      else
+      } else
         return new Date(this.$page.lastUpdated).toJSON().split('T')[0]
     },
-    lastUpdatedText () {
+    lastUpdatedText() {
       if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
         return this.$themeLocaleConfig.lastUpdated
       }
@@ -133,7 +135,7 @@ export default {
       }
       return 'Last Updated'
     },
-    prev () {
+    prev() {
       const prev = this.$frontmatter.prev
       if (prev === false) {
         return
@@ -143,7 +145,7 @@ export default {
         return resolvePrev(this.$page, this.sidebarItems)
       }
     },
-    next () {
+    next() {
       const next = this.$frontmatter.next
       if (next === false) {
         return
@@ -153,7 +155,7 @@ export default {
         return resolveNext(this.$page, this.sidebarItems)
       }
     },
-    editLink () {
+    editLink() {
       if (this.$frontmatter.editLink === false) {
         return false
       }
@@ -170,56 +172,56 @@ export default {
       }
       return ''
     },
-    editLinkText () {
+    editLinkText() {
       return (
-        this.$themeLocaleConfig.editLinkText || this.$themeConfig.editLinkText || `Edit this page`
+          this.$themeLocaleConfig.editLinkText || this.$themeConfig.editLinkText || `Edit this page`
       )
     },
-    pageStyle () {
-      return this.$showSubSideBar ? {} : { paddingRight: '0' }
+    pageStyle() {
+      return this.$showSubSideBar ? {} : {paddingRight: '0'}
     }
   },
 
   methods: {
-    createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
+    createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/
       if (bitbucket.test(repo)) {
         const base = outboundRE.test(docsRepo)
-          ? docsRepo
-          : repo
+            ? docsRepo
+            : repo
         return (
-          base.replace(endingSlashRE, '') +
-           `/src` +
-           `/${docsBranch}/` +
-           (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
-           path +
-           `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
+            base.replace(endingSlashRE, '') +
+            `/src` +
+            `/${docsBranch}/` +
+            (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
+            path +
+            `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
         )
       }
 
       const base = outboundRE.test(docsRepo)
-        ? docsRepo
-        : `https://github.com/${docsRepo}`
+          ? docsRepo
+          : `https://github.com/${docsRepo}`
       return (
-        base.replace(endingSlashRE, '') +
-        `/edit` +
-        `/${docsBranch}/` +
-        (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
-        path
+          base.replace(endingSlashRE, '') +
+          `/edit` +
+          `/${docsBranch}/` +
+          (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
+          path
       )
     }
   }
 }
 
-function resolvePrev (page, items) {
+function resolvePrev(page, items) {
   return find(page, items, -1)
 }
 
-function resolveNext (page, items) {
+function resolveNext(page, items) {
   return find(page, items, 1)
 }
 
-function find (page, items, offset) {
+function find(page, items, offset) {
   const res = []
   flatten(items, res)
   for (let i = 0; i < res.length; i++) {
@@ -230,7 +232,7 @@ function find (page, items, offset) {
   }
 }
 
-function flatten (items, res) {
+function flatten(items, res) {
   for (let i = 0, l = items.length; i < l; i++) {
     if (items[i].type === 'group') {
       flatten(items[i].children || [], res)
@@ -251,23 +253,28 @@ function flatten (items, res) {
   padding-bottom 2rem
   padding-right 14rem
   display block
+
   .side-bar
     position fixed
     top 10rem
     bottom 10rem
     right 2rem
     overflow-y scroll
+
     &::-webkit-scrollbar
       width: 0
       height: 0
+
   .page-title
     max-width: $contentWidth;
     margin: 0 auto;
     padding: 1rem 2.5rem;
     color var(--text-color)
+
   .theme-reco-content h2
     position relative
     padding-left 0.8rem
+
     &::before
       position absolute
       left 0
@@ -276,25 +283,32 @@ function flatten (items, res) {
       height 1.8rem
       content ''
       border-left 5px solid $accentColor
+
   .page-edit
     @extend $wrapper
     padding-top 1rem
     padding-bottom 1rem
     overflow auto
+
     .edit-link
       display inline-block
+
       a
         color $accentColor
         margin-right 0.25rem
+
     .last-updated
       float right
       font-size 0.9em
+
       .prefix
         font-weight 500
         color $accentColor
+
       .time
         font-weight 400
         color #aaa
+
   .comments-wrapper
     @extend $wrapper
 
@@ -302,25 +316,33 @@ function flatten (items, res) {
   @extend $wrapper
   padding-top 1rem
   padding-bottom 0
+
   .inner
     min-height 2rem
     margin-top 0
     border-top 1px solid var(--border-color)
     padding-top 1rem
-    overflow auto // clear float
+    overflow auto
+
+  // clear float
+
   .next
     float right
 
 @media (max-width: $MQMobile)
   .page
     padding-right 0
+
     .side-bar
       display none
+
     .page-title
       padding: 0 1rem;
+
     .page-edit
       .edit-link
         margin-bottom .5rem
+
       .last-updated
         font-size .8em
         float none

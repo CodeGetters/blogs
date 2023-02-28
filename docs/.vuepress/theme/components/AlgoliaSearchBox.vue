@@ -1,4 +1,5 @@
 <template>
+  <!--algolia-->
   <form
     id="search-form"
     class="algolia-search-wrapper search-box"

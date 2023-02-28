@@ -1,6 +1,9 @@
 <template>
+  <!--侧边栏-->
   <aside class="sidebar">
+    <!--个人信息展示-->
     <slot name="top"/>
+    <!--导航栏-->
     <NavLinks/>
     <SidebarLinks :depth="0" :items="items"/>
     <slot name="bottom"/>

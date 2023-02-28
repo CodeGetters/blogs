@@ -1,9 +1,10 @@
 <template>
+  <!--侧边栏标签-->
   <div class="tags">
     <span
       v-for="(item, index) in tags"
       :key="index"
-      :class="{'active': item.name == currentTag}"
+      :class="{'active': item.name === currentTag}"
       :style="{ 'backgroundColor': getOneColor() }"
       @click="tagClick(item)">{{item.name}}</span>
   </div>

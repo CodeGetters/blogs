@@ -1,4 +1,5 @@
 <template>
+  <!--搜索框-->
   <div class="search-box">
     <reco-icon icon="reco-search" />
     <input
