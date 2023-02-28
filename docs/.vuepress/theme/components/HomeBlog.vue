@@ -44,7 +44,7 @@
         </div>
         <!--侧边栏整体-->
         <div class="info-wrapper">
-          用户个人信息
+          <!--用户个人信息-->
           <PersonalInfo/>
           <!--分类-->
           <h4><reco-icon icon="reco-category" /> {{homeBlogCfg.category}}</h4>

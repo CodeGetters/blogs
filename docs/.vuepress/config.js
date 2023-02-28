@@ -42,7 +42,7 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         // 备案
-        record: '黔ICP备2023000823号',
+        record: '黔ICP备2023000823号-1',
         recordLink: 'https://beian.miit.gov.cn/',
         //cyberSecurityRecord: '公安部备案文案',
         //cyberSecurityLink: 'https://www.beian.gov.cn/portal/registerSystemInfo?',
@@ -52,7 +52,6 @@ module.exports = {
         authorAvatar: "https://txy.reday.asia/images/202302161730107.jpg",
         // 作者
         author: "JohnsonXin",
-        startYear: "2023",
         subSidebar: 'auto',
         sidebarDepth: 4,
         nav: [
@@ -195,7 +194,7 @@ module.exports = {
             perPage: 18
         }],
         ['sitemap', {
-            hostname: 'https://conimi.com'
+            hostname: 'https://reday.asia'
         }],
         //樱花飘落
         ["sakura", {
