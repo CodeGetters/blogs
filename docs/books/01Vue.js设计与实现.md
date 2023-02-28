@@ -6,7 +6,7 @@ categories:
 tags:
 - Vue
 - 面包屋
-sidebar: false
+sidebar: true
 isShowComments: true
 ---
 [[toc]]
@@ -164,10 +164,39 @@ Vue会根据组件的Render()的返回值拿到虚拟DOM，然后就可以把组
 ## 第二篇 响应系统
 
 ### 第四章 响应系统的作用与实现
+
 * 响应式数据与副作用函数
 
-副作用函数：会产生副作用的函数
+副作用函数：会产生副作用的函数---除本函数之外的任何函数都可以读取或设置 body 的文本内容。也就是说，该函数的执行会直接或间接影响其它函数的执行
 
+响应式数据：以下面的函数为例，当 obj.text 的值发生变化时，副作用函数 effect 重新执行，而响应式就是在值变化后能够自动重新执行
+```js
+const obj ={text:"hello world"}
+function effect(){
+    //effect 函数的执行会读取 obj.text
+    document.body.innerText='Hello world'
+}
+```
+
+* 响应式数据的基本实现
+
+响应式数据的基本实现就是将副作用函数存储到一个“桶”中
+
+在存储之前我们期望能够拦截一个对象属性的读取和设置操作：
+
+Vue 2：Object.defineProperty
+Vue 3：代理对象Proxy
+
+* 设计一个完善的响应系统
+
+响应的系统的工作流程：
+
+当读取操作发生时，将副作用函数收集到”桶“中
+当设置操作发生时，将”桶“中取到副作用函数并执行
+
+WeakMap、Map、Set的区别
+
+* 分支切换与cleanup
 
 ### 第五章 非原始值的响应式方案
 

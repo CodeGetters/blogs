@@ -1,5 +1,5 @@
 ---
-title: '个人面经'
+title: '面经'
 sidebar: false
 isShowComments: true
 publish: false

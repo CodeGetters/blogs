@@ -73,7 +73,7 @@ module.exports = {
                 text: "面面面",
                 icon: 'reco-three',
                 items: [
-                    {text: "LeetCode题解", link: "/interview/leetcode/目录.html"},
+                    {text: "算法", link: "/interview/leetcode/目录.html"},
                     {text: "面经", link: "/interview/moreau/目录.html"}
                 ]
             },

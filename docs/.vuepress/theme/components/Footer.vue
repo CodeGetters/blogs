@@ -83,9 +83,7 @@ export default defineComponent({
       // 秒
       let _second = (_minute - minute) * 60;
       let second = Math.floor(_second);
-      // 更新span标签内容
-      //runTime.innerHTML = "本站已运行：" + day + "天" + hour + "小时" + minute + "分" + second + "秒";
-      timer.value = `本站已运行时长：${day}天 ${hour}:${minute}:${second}`
+      timer.value = `本站已运行时长：${day}天${hour}时${minute}分${second}秒`
     }
 
     onMounted(() => {
