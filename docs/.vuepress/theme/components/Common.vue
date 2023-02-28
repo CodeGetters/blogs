@@ -1,4 +1,5 @@
 <template>
+  <!--评论-->
   <div class="theme-container" :class="pageClasses">
     <div v-if="!absoluteEncryption">
       <transition name="fade">

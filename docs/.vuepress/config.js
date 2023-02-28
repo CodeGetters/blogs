@@ -42,7 +42,7 @@ module.exports = {
         search: true,
         searchMaxSuggestions: 10,
         // 备案
-        record: '黔ICP备2023000823号',
+        record: '黔ICP备2023000823号-1',
         recordLink: 'https://beian.miit.gov.cn/',
         //cyberSecurityRecord: '公安部备案文案',
         //cyberSecurityLink: 'https://www.beian.gov.cn/portal/registerSystemInfo?',
@@ -52,7 +52,6 @@ module.exports = {
         authorAvatar: "https://txy.reday.asia/images/202302161730107.jpg",
         // 作者
         author: "JohnsonXin",
-        startYear: "2023",
         subSidebar: 'auto',
         sidebarDepth: 4,
         nav: [
@@ -61,24 +60,24 @@ module.exports = {
                 text: '笔记',
                 icon: 'reco-document',
                 items: [
-                    {text: 'HTML', link: "/blogs/html/01"},
-                    {text: "CSS", link: "blogs/css/01"},
-                    {text: "JS", link: "blogs/js/01"},
-                    {text: "多人协作", link: "blogs/cooperation/01Git"},
-                    {text: "博客", link: "blogs/useBlog/01使用vuepress打造属于自己的博客"},
+                    {text: 'HTML', link: "/blogs/html/01.html"},
+                    {text: "CSS", link: "blogs/css/01.html"},
+                    {text: "JS", link: "blogs/js/01.html"},
+                    {text: "多人协作", link: "blogs/cooperation/01Git.html"},
+                    {text: "博客", link: "blogs/useBlog/01使用vuepress打造属于自己的博客.html"},
                 ]
             },
-            {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
             {text: "面包屋", link: "/books/目录.html", icon: 'reco-other'},
             {
                 text: "面面面",
                 icon: 'reco-three',
                 items: [
-                    {text: "LeetCode题解", link: "/interview/leetcode/目录.html"},
+                    {text: "算法", link: "/interview/leetcode/目录.html"},
                     {text: "面经", link: "/interview/moreau/目录.html"}
                 ]
             },
+            {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"}
         ],
         // 博客配置
@@ -195,7 +194,7 @@ module.exports = {
             perPage: 18
         }],
         ['sitemap', {
-            hostname: 'https://conimi.com'
+            hostname: 'https://reday.asia'
         }],
         //樱花飘落
         ["sakura", {

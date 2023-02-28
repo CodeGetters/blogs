@@ -1,5 +1,5 @@
 ---
-title: 'leetcode刷题笔记'
+title: '算法'
 sidebar: false
 isShowComments: true
 publish: false

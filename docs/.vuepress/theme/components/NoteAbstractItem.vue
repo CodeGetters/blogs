@@ -1,25 +1,42 @@
 <template>
+  <!--文章概览-->
   <div
-    class="abstract-item"
-    @click="$router.push(item.path)">
-    <reco-icon v-if="item.frontmatter.sticky" icon="reco-sticky" />
+      class="abstract-item"
+      @click="$router.push(item.path)">
+    <reco-icon v-if="item.frontmatter.sticky" icon="reco-sticky"/>
+    <!--标题-->
     <div class="title">
-      <reco-icon v-if="item.frontmatter.keys" icon="reco-lock" />
-      <router-link :to="item.path">{{item.title}}</router-link>
+      <reco-icon v-if="item.frontmatter.keys" icon="reco-lock"/>
+      <router-link :to="item.path">{{ item.title }}</router-link>
     </div>
     <div class="abstract" v-html="item.excerpt"></div>
+    <!--文章信息-->
     <PageInfo
-      :pageInfo="item"
-      :currentTag="currentTag">
+        :pageInfo="item"
+        :currentTag="currentTag"
+        :showAccessNumber="showAccessNumber">
     </PageInfo>
   </div>
 </template>
 
 <script>
-import { RecoIcon } from '@vuepress-reco/core/lib/components'
+import {RecoIcon} from '@vuepress-reco/core/lib/components'
 import PageInfo from './PageInfo'
+
 export default {
-  components: { PageInfo, RecoIcon },
+  computed: {
+    //是否显示浏览量
+    showAccessNumber() {
+      const {
+        $themeConfig: {valineConfig},
+        $themeLocaleConfig: {valineConfig: valineLocalConfig}
+      } = this
+
+      const vc = valineLocalConfig || valineConfig
+      return vc && vc.visitor !== false;
+    },
+  },
+  components: {PageInfo, RecoIcon},
   props: ['item', 'currentPage', 'currentTag']
 }
 </script>
@@ -37,9 +54,11 @@ export default {
   transition all .3s
   background-color var(--background-color)
   cursor: pointer;
+
   > * {
     pointer-events: auto;
   }
+
   .reco-sticky
     position absolute
     top 0
@@ -47,18 +66,23 @@ export default {
     display inline-block
     color $accentColor
     font-size 2.4rem
+
   &:hover
     box-shadow: var(--box-shadow-hover)
+
   .title
     position: relative;
     font-size: 1.28rem;
     line-height: 46px;
     display: inline-block;
+
     a
       color: var(--text-color);
+
     .reco-lock
       font-size 1.28rem
       color $accentColor
+
     &:after
       content: "";
       position: absolute;
@@ -71,21 +95,26 @@ export default {
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
       transition: .3s ease-in-out;
+
     &:hover a
       color $accentColor
+
     &:hover:after
       visibility visible
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
+
   .tags
     .tag-item
       &.active
         color $accentColor
+
       &:hover
         color $accentColor
+
 @media (max-width: $MQMobile)
   .tags
     display block
     margin-top 1rem;
-    margin-left: 0!important;
+    margin-left: 0 !important;
 </style>

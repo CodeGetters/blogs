@@ -1,8 +1,10 @@
 <template>
+  <!--主页-->
   <div class="home-blog">
     <div class="hero" :style="{ ...bgImageStyle }">
       <div>
         <ModuleTransition>
+          <!--背景图-->
           <img
             class="hero-img"
             v-if="recoShowModule && $frontmatter.heroImage"
@@ -40,8 +42,11 @@
             :currentPage="currentPage"
             @getCurrentPage="getCurrentPage" />
         </div>
+        <!--侧边栏整体-->
         <div class="info-wrapper">
+          <!--用户个人信息-->
           <PersonalInfo/>
+          <!--分类-->
           <h4><reco-icon icon="reco-category" /> {{homeBlogCfg.category}}</h4>
           <ul class="category-wrapper">
             <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
@@ -52,6 +57,7 @@
             </li>
           </ul>
           <hr>
+          <!--标签列表-->
           <h4 v-if="$tags.list.length !== 0"><reco-icon icon="reco-tag" /> {{homeBlogCfg.tag}}</h4>
           <TagList @getCurrentTag="getPagesByTags" />
           <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><reco-icon icon="reco-friend" /> {{homeBlogCfg.friendLink}}</h4>

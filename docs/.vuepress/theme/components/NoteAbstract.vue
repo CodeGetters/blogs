@@ -1,4 +1,5 @@
 <template>
+  <!--文章框展示-->
   <div class="abstract-wrapper">
     <NoteAbstractItem
       v-for="(item) in currentPageData"
