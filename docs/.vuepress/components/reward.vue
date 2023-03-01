@@ -1,6 +1,6 @@
 <template>
   <div class="donation">
-    <span>创作不易，赏杯奶茶钱吧~</span>
+    <span>创作不易，请我喝一杯奶茶吧~</span>
     <br>
     <br>
     <button>打赏</button>

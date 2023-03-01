@@ -7,16 +7,15 @@
     <!--  <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a>-->
     <!--</span>-->
 
-    <!--备案信息-->
-    <span v-if="$themeConfig.record">
-      <reco-icon icon="reco-beian"/>
-      <a :href="$themeConfig.recordLink || '#'">{{ $themeConfig.record }}</a>
-    </span>
+    <!--运行计时-->
+    <span id="runTime">{{ timer }}</span>
+    <br>
+    <br>
     <!--版权信息-->
     <span>
       <reco-icon icon="reco-copyright"/>
       <a>
-        <span v-if="$themeConfig.author || $site.title">MIT Licensed | Copyright © 2023-present {{
+        <span v-if="$themeConfig.author || $site.title">(CC)BY-NC-SA | Copyright © 2023-present {{
             $themeConfig.author || $site.title
           }}</span>
         &nbsp;&nbsp;
@@ -31,14 +30,20 @@
       <reco-icon icon="reco-eye"/>
       <AccessNumber idVal="/"/>
     </span>
+    <br>
+    <!--备案信息-->
+    <!--ICP备案-->
+    <span v-if="$themeConfig.record">
+      <reco-icon icon="reco-beian"/>
+      <a :href="$themeConfig.recordLink || '#'">{{ $themeConfig.record }}</a>
+    </span>
+    <!--公安备案-->
     <p class="cyber-security" v-if="$themeConfig.cyberSecurityRecord">
       <img src="https://img.alicdn.com/tfs/TB1..50QpXXXXX7XpXXXXXXXXXX-40-40.png" alt="">
       <a :href="$themeConfig.cyberSecurityLink || '#'">{{ $themeConfig.cyberSecurityRecord }}</a>
     </p>
     <Comments :isShowComments="false"/>
     <br>
-    <!--运行计时-->
-    <span id="runTime">{{ timer }}</span>
   </div>
 </template>
 
@@ -121,6 +126,9 @@ export default defineComponent({
   }
 
   .cyber-security {
+    display inline-block
+    margin-left 10px
+
     img {
       margin-right .5rem
       width 20px
