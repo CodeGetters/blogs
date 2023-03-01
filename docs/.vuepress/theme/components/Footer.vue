@@ -127,6 +127,7 @@ export default defineComponent({
 
   .cyber-security {
     display inline-block
+    margin-left 10px
 
     img {
       margin-right .5rem

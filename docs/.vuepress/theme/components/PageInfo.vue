@@ -8,6 +8,7 @@
     >
       <span>{{ pageInfo.frontmatter.author || $themeConfig.author || $site.title }}</span>
     </reco-icon>
+
     <!--日期-->
     <reco-icon
       v-if="pageInfo.frontmatter.date"
@@ -22,6 +23,7 @@
     >
       <AccessNumber :idVal="pageInfo.path" :numStyle="numStyle" />
     </reco-icon>
+
     <!--标签-->
     <reco-icon
       v-if="pageInfo.frontmatter.tags"

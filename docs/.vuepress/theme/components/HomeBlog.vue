@@ -62,6 +62,8 @@
           <TagList @getCurrentTag="getPagesByTags" />
           <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><reco-icon icon="reco-friend" /> {{homeBlogCfg.friendLink}}</h4>
           <FriendLink />
+          <!--TODO:完善站点信息模块-->
+          <!--<SiteInfo/>-->
         </div>
       </div>
     </ModuleTransition>
@@ -80,10 +82,11 @@ import pagination from '@theme/mixins/pagination'
 import { ModuleTransition, RecoIcon } from '@vuepress-reco/core/lib/components'
 import PersonalInfo from '@theme/components/PersonalInfo'
 import { getOneColor } from '@theme/helpers/other'
+import SiteInfo from "./SiteInfo.vue";
 
 export default {
   mixins: [pagination],
-  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo, RecoIcon },
+  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo, RecoIcon,SiteInfo },
   data () {
     return {
       recoShow: false,

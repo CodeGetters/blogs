@@ -47,10 +47,16 @@ export default {
         link: "https://ysx.cosine.ren/",
       },
       {
-        name:"Revincx",
+        name: "Revincx",
         link: "https://blog.revincx.icu/",
         avatar: "https://cdn.jsdelivr.net/gh/Revincx/blog-assets@master/images/avatar.jpg",
         desc: "可爱就是正义~"
+      },
+      {
+        name: "Young Kbt Blog",
+        desc: "故事由我书写，旅程由你见证，传奇由她聆听",
+        avatar: "https://cdn.staticaly.com/gh/Kele-Bingtang/static@master/user/avatar2.png",
+        link: "https://notes.youngkbt.cn/"
       }
     ]
     return {friendLinks, FriendLink}
