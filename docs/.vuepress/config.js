@@ -21,6 +21,8 @@ module.exports = {
         //algolia
         ['link', {rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3"}],
         ['script', {src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3"}],
+        //解决 chrome 统计不准确的问题
+        ['meta', {name: 'referrer', content: 'no-referrer-when-downgrade'}],
         //百度统计
         ['script', {}, `
         var _hmt = _hmt || [];
@@ -44,8 +46,8 @@ module.exports = {
         // 备案
         record: '黔ICP备2023000823号-1',
         recordLink: 'https://beian.miit.gov.cn/',
-        //cyberSecurityRecord: '公安部备案文案',
-        //cyberSecurityLink: 'https://www.beian.gov.cn/portal/registerSystemInfo?',
+        cyberSecurityRecord: '贵公网安备 52033002001228号',
+        cyberSecurityLink: 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52033002001228',
         // 最后更新时间
         lastUpdated: '上次更新',
         logo: "https://txy.reday.asia/images/202302161730107.jpg",
@@ -181,7 +183,7 @@ module.exports = {
         ['vuepress-plugin-nuggets-style-copy', {
             copyText: 'copy',
             tip: {
-                content: '复制成功!'
+                content: '复制成功！本站所有文章除特别声明外，均采用 (CC)BY-NC-SA 许可协议。转载请注明出处！'
             }
         }],
         ['@vuepress/last-updated',
@@ -253,3 +255,4 @@ module.exports = {
         }],
     ]
 }
+

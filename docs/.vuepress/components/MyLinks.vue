@@ -39,6 +39,18 @@ export default {
         desc: '一点一滴都是进步',
         avatar: 'http://www.weblearn.fit/favicon.ico',
         link: 'http://www.weblearn.fit/'
+      },
+      {
+        title: "cosの博客",
+        desc: "WA的一声就哭了",
+        avatar: "https://ysx.cosine.ren/img/avatar.jpg",
+        link: "https://ysx.cosine.ren/",
+      },
+      {
+        name:"Revincx",
+        link: "https://blog.revincx.icu/",
+        avatar: "https://cdn.jsdelivr.net/gh/Revincx/blog-assets@master/images/avatar.jpg",
+        desc: "可爱就是正义~"
       }
     ]
     return {friendLinks, FriendLink}
