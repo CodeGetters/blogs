@@ -24,9 +24,9 @@ export default {
   },
   methods: {
     bgTimeColor() {
-      var hours = new Date().getHours();
-      var minutes = new Date().getMinutes();
-      var seconds = new Date().getSeconds();
+      let hours = new Date().getHours();
+      let minutes = new Date().getMinutes();
+      let seconds = new Date().getSeconds();
       hours = hours < 10 ? "0" + hours : hours;
       minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
