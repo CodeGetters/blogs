@@ -1,14 +1,25 @@
 //TODO:
-const fs = require('fs'); // 文件模块
-const path = require('path'); // 路径模块
-const matter = require('gray-matter'); // FrontMatter解析器 https://github.com/jonschlinkert/gray-matter
-const chalk = require('chalk') // 命令行打印美化
+
+// 文件模块
+const fs = require('fs');
+// 路径模块
+const path = require('path');
+// FrontMatter解析器 https://github.com/jonschlinkert/gray-matter
+const matter = require('gray-matter');
+// 命令行打印美化
+const chalk = require('chalk')
 const log = console.log
-const docsRoot = path.join(__dirname, '..', '..', '..'); // docs文件路径
+
+//文件路径
+const docsRoot = path.join(__dirname, '..', '..', '..');
 
 /**
- * 获取本站的文章数据
- * 获取所有的 md 文档，可以排除指定目录下的文档
+ *
+ * @param excludeFiles
+ * @param dir
+ * @param filesList
+ * @return {*[]}
+ * @description 获取本站的文章数据 获取所有的 md 文档，可以排除指定目录下的文档
  */
 function readFileList(excludeFiles = [''], dir = docsRoot, filesList = []) {
     const files = fs.readdirSync(dir);
@@ -48,9 +59,12 @@ function readFileList(excludeFiles = [''], dir = docsRoot, filesList = []) {
     });
     return filesList;
 }
+
 /**
- * 获取本站的文章总字数
- * 可以排除某个目录下的 md 文档字数
+ *
+ * @param excludeFiles
+ * @return {number|string}
+ * @description 获取本站的文章总字数 可以排除某个目录下的 md 文档字数
  */
 function readTotalFileWords(excludeFiles = ['']) {
     const filesList = readFileList(excludeFiles);
@@ -65,9 +79,14 @@ function readTotalFileWords(excludeFiles = ['']) {
     }
     return Math.round(wordCount / 100) / 10 + 'k';
 }
+
 /**
- * 获取每一个文章的字数
- * 可以排除某个目录下的 md 文档字数
+ *
+ * @param excludeFiles
+ * @param cn
+ * @param en
+ * @return {*[]}
+ * @description 获取每一个文章的字数 可以排除某个目录下的 md 文档字数
  */
 function readEachFileWords(excludeFiles = [''], cn, en) {
     const filesListWords = [];
@@ -91,7 +110,12 @@ function readEachFileWords(excludeFiles = [''], cn, en) {
 }
 
 /**
- * 计算预计的阅读时间
+ *
+ * @param len
+ * @param cn
+ * @param en
+ * @return {string|string}
+ * @description 计算预计的阅读时间
  */
 function readTime(len, cn = 300, en = 160) {
     var readingTime = len[0] / cn + len[1] / en;
@@ -114,15 +138,22 @@ function readTime(len, cn = 300, en = 160) {
 }
 
 /**
- * 读取文件内容
+ *
+ * @param filePath
+ * @return {string}
+ * @description 读取文件内容
  */
 function getContent(filePath) {
     return fs.readFileSync(filePath, 'utf8');
 }
+
 /**
- * 获取文件内容的字数
- * cn：中文
- * en：一整句英文（没有空格隔开的英文为 1 个）
+ *
+ * @param content
+ * @return {number[]}
+ * @description 获取文件内容的字数
+ * @description cn：中文
+ * @description en：一整句英文（没有空格隔开的英文为 1 个）
  */
 function counter(content) {
     const cn = (content.match(/[\u4E00-\u9FA5]/g) || []).length;

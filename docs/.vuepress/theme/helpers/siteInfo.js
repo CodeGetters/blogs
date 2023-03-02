@@ -1,5 +1,12 @@
 //TODO：
-// 日期格式化(只获取年月日)
+
+/**
+ *
+ * @param date
+ * @return {string}
+ * @description 日期格式化
+ */
+
 export function dateFormat(date) {
     if (!(date instanceof Date)) {
         date = new Date(date);
@@ -7,13 +14,22 @@ export function dateFormat(date) {
     return `${date.getUTCFullYear()}-${zero(date.getUTCMonth() + 1)}-${zero(date.getUTCDate())}`;
 }
 
-// 小于10补0
+/**
+ *
+ * @param d
+ * @return {string}
+ * @description 小于 10 补 0
+ */
+
 export function zero(d) {
     return d.toString().padStart(2, '0');
 }
 
 /**
- * 计算最后活动时间
+ *
+ * @param posts
+ * @return {*}
+ * @description 计算最后活动时间
  */
 export function lastUpdatePosts(posts) {
     posts.sort((prev, next) => {
@@ -22,23 +38,39 @@ export function lastUpdatePosts(posts) {
     return posts;
 }
 
-// 获取时间的时间戳
-export function getTimeNum(post) {
-    let dateStr = post.lastUpdated || post.frontmatter.date;
-    let date = new Date(dateStr);
-    if (date === "Invalid Date" && dateStr) { // 修复new Date()在Safari下出现Invalid Date的问题
-        date = new Date(dateStr.replace(/-/g, '/'));
-    }
-    return date.getTime();
-}
-
-// 比对时间
+/**
+ *
+ * @param a
+ * @param b
+ * @return {number}
+ * @description 比对时间
+ */
 export function compareDate(a, b) {
     return getTimeNum(b) - getTimeNum(a);
 }
 
 /**
- * 获取两个日期相差多少天
+ *
+ * @param post
+ * @return {number}
+ * @description 获取时间的时间戳
+ */
+export function getTimeNum(post) {
+    let dateStr = post.lastUpdated || post.frontmatter.date;
+    let date = new Date(dateStr);
+    if (date === "Invalid Date" && dateStr) {
+        date = new Date(dateStr.replace(/-/g, '/'));
+    }
+    return date.getTime();
+}
+
+
+/**
+ *
+ * @param startDate
+ * @param endDate
+ * @return {number}
+ * @description 获取两个日期相差多少天
  */
 export function dayDiff(startDate, endDate) {
     if (!endDate) {
@@ -47,12 +79,15 @@ export function dayDiff(startDate, endDate) {
     }
     startDate = dateFormat(startDate);
     endDate = dateFormat(endDate);
-    let day = parseInt(Math.abs(new Date(startDate) - new Date(endDate)) / (1000 * 60 * 60 * 24));
-    return day;
+    return parseInt(Math.abs(new Date(startDate) - new Date(endDate)) / (1000 * 60 * 60 * 24));
 }
 
 /**
- * 计算相差多少年/月/日/时/分/秒
+ *
+ * @param startDate
+ * @param endDate
+ * @return {string}
+ * @description 计算相差多少年/月/日/时/分/秒
  */
 export function timeDiff(startDate, endDate) {
     if (!endDate) {
@@ -67,6 +102,7 @@ export function timeDiff(startDate, endDate) {
     }
     // 计算时间戳的差
     const diffValue = parseInt((Math.abs(endDate - startDate) / 1000));
+
     if (diffValue === 0) {
         return '刚刚';
     } else if (diffValue < 60) {
@@ -85,22 +121,30 @@ export function timeDiff(startDate, endDate) {
 }
 
 /**
- * 判断当前月的天数（28、29、30、31）
+ *
+ * @param mouth
+ * @param year
+ * @return {number}
+ * @description 判断当前月的天数（28、29、30、31）
  */
 export function getDays(mouth, year) {
+    //默认一月 30 天
     let days = 30;
     if (mouth === 2) {
         days = year % 4 === 0 ? 29 : 28;
+        //31天的月份
     } else if (mouth === 1 || mouth === 3 || mouth === 5 || mouth === 7 || mouth === 8 || mouth === 10 || mouth === 12) {
-        // 月份为：1,3,5,7,8,10,12 时，为大月.则天数为 31；
         days = 31;
     }
     return days;
 }
 
 /**
- * 已运行时间低于一天显示时分秒
- * 目前该函数没有使用，低于一天直接显示不到一天
+ *
+ * @param startDate
+ * @param endDate
+ * @return {string}
+ * @description 已运行时间低于一天显示时分秒,目前该函数没有使用，低于一天直接显示不到一天
  */
 export function getTime(startDate, endDate) {
     if (day < 0) {
@@ -133,9 +177,9 @@ export function getTime(startDate, endDate) {
     }
 }
 
-var bszCaller, bszTag, scriptTag, ready;
+let bszCaller, bszTag, scriptTag, ready;
 
-var t,
+let t,
     e,
     n,
     a = !1,
