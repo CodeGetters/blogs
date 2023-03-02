@@ -3,8 +3,8 @@
   <div class="footer-wrapper">
     <!--皮肤主题-->
     <!--<span>-->
-    <!--  <reco-icon icon="reco-theme" />-->
-    <!--  <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a>-->
+    <!--  <reco-icon icon="reco-friendLinks" />-->
+    <!--  <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-friendLinks-reco@${version}`}}</a>-->
     <!--</span>-->
 
     <!--运行计时-->
@@ -33,7 +33,7 @@
     <br>
     <!--备案信息-->
     <!--ICP备案-->
-    <span v-if="$themeConfig.record">
+    <span v-if="$themeConfig.record" class="ICPbeian">
       <reco-icon icon="reco-beian"/>
       <a :href="$themeConfig.recordLink || '#'">{{ $themeConfig.record }}</a>
     </span>
@@ -125,9 +125,12 @@ export default defineComponent({
     }
   }
 
+  .ICPbeian{
+    margin-right 10px
+  }
+
   .cyber-security {
     display inline-block
-    margin-left 10px
 
     img {
       margin-right .5rem

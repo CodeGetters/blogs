@@ -26,7 +26,7 @@ module.exports = {
         //解决 chrome 统计不准确的问题
         ['meta', {name: 'referrer', content: 'no-referrer-when-downgrade'}],
         //图标
-        ['link', {rel: "stylesheet", href: "//at.alicdn.com/t/c/font_3925150_6cdmj2i6r8g.css"}],
+        ['link', {rel: "stylesheet", href: "//at.alicdn.com/t/c/font_3925150_svsn9ydx00l.css"}],
         //百度统计
         ['script', {}, `
         var _hmt = _hmt || [];
@@ -97,10 +97,19 @@ module.exports = {
                 items: [
                     {text: "算法", link: "/interview/leetcode/目录.html"},
                     {text: "面经", link: "/interview/moreau/目录.html"}
+
                 ]
             },
             {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
-            {text: "友人帐", link: "/view/friendLinks.html", icon: "reco-mail"}
+            {
+                text: "关于友人帐",
+                link: "/view/",
+                icon: "reco-mail",
+                items: [
+                    {text: "友人帐", link: "/view/friendLinks.html"},
+                    {text: "站点监控",link: "https://stats.uptimerobot.com/W0ZyWT6W70"}
+                ]
+            }
         ],
         // 博客配置
         blogConfig: {

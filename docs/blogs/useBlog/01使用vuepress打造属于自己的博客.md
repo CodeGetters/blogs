@@ -450,7 +450,7 @@ yarn add @vuepress-reco/vuepress-plugin-kan-ban-niang -D
     //看板娘
     '@vuepress-reco/vuepress-plugin-kan-ban-niang',
     {
-        theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
+        friendLinks: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16']
     }
 ]
 ```

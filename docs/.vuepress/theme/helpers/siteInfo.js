@@ -1,3 +1,4 @@
+//TODO：
 // 日期格式化(只获取年月日)
 export function dateFormat(date) {
     if (!(date instanceof Date)) {
@@ -215,7 +216,7 @@ bszCaller = {
 
 export function fetch() {
     bszTag && bszTag.hides();
-    bszCaller.fetch("//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function (t) {
+    bszCaller.fetch("//siteInfo.ibruce.info/siteInfo?jsonpCallback=BusuanziCallback", function (t) {
         bszTag.texts(t), bszTag.shows();
     })
 };
@@ -224,19 +225,19 @@ bszTag = {
     bszs: ["site_pv", "page_pv", "site_uv"],
     texts: function (n) {
         this.bszs.map(function (t) {
-            var e = document.getElementById("busuanzi_value_" + t);
+            var e = document.getElementById("siteInfo_value_" + t);
             e && (e.innerHTML = n[t]);
         });
     },
     hides: function () {
         this.bszs.map(function (t) {
-            var e = document.getElementById("busuanzi_container_" + t);
+            var e = document.getElementById("siteInfo_container_" + t);
             e && (e.style.display = "none");
         });
     },
     shows: function () {
         this.bszs.map(function (t) {
-            var e = document.getElementById("busuanzi_container_" + t);
+            var e = document.getElementById("siteInfo_container_" + t);
             e && (e.style.display = "inline");
         });
     },

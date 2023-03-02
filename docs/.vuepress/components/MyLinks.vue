@@ -1,6 +1,16 @@
 <template>
   <div class="container">
-    <FriendLink v-for="(item, index) in friendLinks"
+    <span class="explain">小伙伴们</span>
+    <FriendLink v-for="(item, index) in partner"
+                :key="index"
+                :title="item.title"
+                :desc="item.desc"
+                :link="item.link"
+                :avatar="item.avatar"
+    />
+
+    <span class="explain">特别感谢</span>
+    <FriendLink v-for="(item, index) in theme"
                 :key="index"
                 :title="item.title"
                 :desc="item.desc"
@@ -13,53 +23,11 @@
 <script>
 import FriendLink from "./FriendLink.vue";
 
+import {theme,partner} from "../../friendInfo/friendLinks";
+
 export default {
   setup() {
-    const friendLinks = [
-      {
-        title: 'VuePress',
-        desc: 'Vue 驱动的静态网站生成器',
-        avatar: 'https://v1.vuepress.vuejs.org/hero.png',
-        link: 'https://v1.vuepress.vuejs.org/zh/',
-      },
-      {
-        title: 'VuePress',
-        desc: '一款简洁而优雅的 vuepress 博客&文档 主题',
-        avatar: 'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
-        link: 'https://vuepress-theme-reco.recoluan.com/',
-      },
-      {
-        title: 'mumu’s Blog',
-        desc: ' 一心一明月，一树一年华',
-        avatar: 'https://www.pikamumu.top/logo.png',
-        link: 'https://www.pikamumu.top',
-      },
-      {
-        title: '老陈笔记',
-        desc: '一点一滴都是进步',
-        avatar: 'http://www.weblearn.fit/favicon.ico',
-        link: 'http://www.weblearn.fit/'
-      },
-      {
-        title: "cosの博客",
-        desc: "WA的一声就哭了",
-        avatar: "https://ysx.cosine.ren/img/avatar.jpg",
-        link: "https://ysx.cosine.ren/",
-      },
-      {
-        name: "Revincx",
-        link: "https://blog.revincx.icu/",
-        avatar: "https://cdn.jsdelivr.net/gh/Revincx/blog-assets@master/images/avatar.jpg",
-        desc: "可爱就是正义~"
-      },
-      {
-        name: "Young Kbt Blog",
-        desc: "故事由我书写，旅程由你见证，传奇由她聆听",
-        avatar: "https://cdn.staticaly.com/gh/Kele-Bingtang/static@master/user/avatar2.png",
-        link: "https://notes.youngkbt.cn/"
-      }
-    ]
-    return {friendLinks, FriendLink}
+    return {theme,partner, FriendLink}
   }
 }
 </script>
@@ -71,5 +39,15 @@ export default {
   width: 100%;
   margin: auto;
   height: auto;
+}
+.explain{
+  width: 100%;
+  font-size: 1.4rem;
+  display: block;
+  margin-top: -1.5rem;
+  padding-top: 3.6rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
 }
 </style>
