@@ -15,7 +15,7 @@ export default {
     $route(to, from) {
       let gloablTip = document.getElementsByClassName("gloablTip");
       // 如果已经存在一个消息提示，则不会重新弹出，除非消息提示已经消失
-      if(gloablTip.length <= 0){
+      if (gloablTip.length <= 0) {
         if (indexTip || (this.$route.path !== "/" && this.$route.hash === "")) {
           this.bgTimeColor();
         }
@@ -24,14 +24,18 @@ export default {
   },
   methods: {
     bgTimeColor() {
+      //获取时分秒
       let hours = new Date().getHours();
       let minutes = new Date().getMinutes();
       let seconds = new Date().getSeconds();
+      //个位数加 0
       hours = hours < 10 ? "0" + hours : hours;
       minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
+      //创建挂载元素
       let div = document.createElement("div");
       div.className = "banner-color";
+      //早上 6-11
       if (hours >= 6 && hours < 11) {
         addTip(
             `早上好呀~~，现在是 ${hours}:${minutes}:${seconds}，吃早餐了吗？😊🤭`,
@@ -39,14 +43,16 @@ export default {
             50,
             4000
         );
-      } else if (hours >= 12 && hours <= 16) {
+        //中午 12-16
+      } else if (hours >= 12 && hours < 16) {
         addTip(
             `下午好呀~~，现在是 ${hours}:${minutes}:${seconds}，繁忙的下午也要适当休息哦🥤🏀~~`,
             "info",
             50,
             4000
         );
-      } else if (hours >= 16 && hours <= 19) {
+        //下午 16-19
+      } else if (hours >= 16 && hours < 19) {
         addTip(
             `到黄昏了~~，现在是 ${hours}:${minutes}:${seconds}，该准备吃饭啦🥗🍖~~`,
             "info",
@@ -83,25 +89,25 @@ export default {
  * 在 head 里添加图标 link 地址：https://at.alicdn.com/t/font_3114978_qe0b39no76.css
  */
 function addTip(content, type, startHeight = 50, dieTime = 3000) {
-  var tip = document.querySelectorAll(".global-tip");
-  var time = new Date().getTime();
+  let tip = document.querySelectorAll(".global-tip");
+  let time = new Date().getTime();
   // 获取最后消息提示元素的高度
-  var top = tip.length === 0 ? 0 : tip[tip.length - 1].getAttribute("data-top");
+  let top = tip.length === 0 ? 0 : tip[tip.length - 1].getAttribute("data-top");
   // 如果产生两个以上的消息提示，则出现在上一个提示的下面，即高度添加，否则默认 50
-  var lastTop =
-      parseInt(top) +
-      (tip.length !== 0 ? tip[tip.length - 1].offsetHeight + 17 : startHeight);
+  let lastTop = parseInt(top) + (tip.length !== 0 ? tip[tip.length - 1].offsetHeight + 17 : startHeight);
 
+  //创建消息容器
   let div = document.createElement("div");
   div.className = `global-tip tip-${type} ${time} gloablTip`;
   div.style.top = parseInt(top) + "px";
   div.setAttribute("data-top", lastTop);
+  //内容
   if (type === "info" || type === 1) {
     div.innerHTML = `<i class="iconfont icon-info icon"></i><p class="tip-info-content">${content}</p>`;
   } else if (type === "success" || type === 2) {
     div.innerHTML = `<i class="iconfont icon-dagouyouquan icon"></i><p class="tip-success-content">${content}</p>`;
   } else if (type === "danger" || type === 3) {
-    div.innerHTML = `<i class="iconfont icon-cuowu icon"></i><p class="tip-danger-content">${content}</p>`;
+    div.innerHTML = `<i class="iconfont icon-iconfontcuowu icon"></i><p class="tip-danger-content">${content}</p>`;
   } else if (type === "warning" || type === 4) {
     div.innerHTML = `<i class="iconfont icon-gantanhao icon"></i><p class="tip-warning-content">${content}</p>`;
   }
@@ -119,11 +125,10 @@ function addTip(content, type, startHeight = 50, dieTime = 3000) {
     timeTip.style.opacity = "0";
 
     // 下面的所有元素回到各自曾经的出发点
-    var allTipElement = nextAllTipElement(timeTip);
+    let allTipElement = nextAllTipElement(timeTip);
     for (let i = 0; i < allTipElement.length; i++) {
-      var next = allTipElement[i];
-      var top =
-          parseInt(next.getAttribute("data-top")) - next.offsetHeight - 17;
+      let next = allTipElement[i];
+      let top = parseInt(next.getAttribute("data-top")) - next.offsetHeight - 17;
       next.setAttribute("data-top", top);
       next.style.top = top + "px";
     }
@@ -132,12 +137,13 @@ function addTip(content, type, startHeight = 50, dieTime = 3000) {
     }, 500);
   }, dieTime);
 }
+
 /**
  * 获取后面的兄弟元素
  */
 function nextAllTipElement(elem) {
-  var r = [];
-  var n = elem;
+  let r = [];
+  let n = elem;
   for (; n; n = n.nextSibling) {
     if (n.nodeType === 1 && n !== elem) {
       r.push(n);

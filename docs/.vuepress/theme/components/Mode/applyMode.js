@@ -16,7 +16,7 @@ function render (mode) {
 /**
  * Sets a color scheme for the website.
  * If browser supports "prefers-color-scheme", 'auto' mode will respect the setting for light or dark mode
- * otherwise it will set a dark theme during night time
+ * otherwise it will set a dark friendLinks during night time
  */
 export default function applyMode (mode) {
   if (mode !== 'auto') {

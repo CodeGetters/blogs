@@ -8,7 +8,7 @@ export function filterPosts (posts, isTimeline) {
     if (posts.indexOf(item) !== index) {
       return false
     } else {
-      const someConditions = home == true || title == undefined || publish === false
+      const someConditions = home === true || title === undefined || publish === false
       const boo = isTimeline === true
         ? !(someConditions || date === undefined)
         : !someConditions
@@ -24,7 +24,7 @@ export function sortPostsByStickyAndDate (posts) {
     const prevSticky = prev.frontmatter.sticky
     const nextSticky = next.frontmatter.sticky
     if (prevSticky && nextSticky) {
-      return prevSticky == nextSticky ? compareDate(prev, next) : (prevSticky - nextSticky)
+      return prevSticky === nextSticky ? compareDate(prev, next) : (prevSticky - nextSticky)
     } else if (prevSticky && !nextSticky) {
       return -1
     } else if (!prevSticky && nextSticky) {

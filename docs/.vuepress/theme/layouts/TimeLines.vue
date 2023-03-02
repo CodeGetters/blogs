@@ -2,7 +2,7 @@
   <Common class="timeline-wrapper" :sidebar="false">
     <ul class="timeline-content">
       <ModuleTransition >
-        <li v-show="recoShowModule" class="desc">自2017年1月26日至今，共水了 <span>{{ $recoPosts.length }}</span> 篇文章</li>
+        <li v-show="recoShowModule" class="desc">自2023年01月24日至今，共水了 <span>{{ $recoPosts.length }}</span> 篇文章</li>
       </ModuleTransition>
       <ModuleTransition
         :delay="String(0.08 * (index + 1))"
