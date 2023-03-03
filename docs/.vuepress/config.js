@@ -100,16 +100,17 @@ module.exports = {
 
                 ]
             },
-            {text: "关于我", link: "/view/aboutMyself.html", icon: "reco-account"},
             {
-                text: "关于友人帐",
+                text: "关于本站",
                 link: "/view/",
                 icon: "reco-mail",
                 items: [
+                    {text: "关于我", link: "/view/aboutMyself.html"},
                     {text: "友人帐", link: "/view/friendLinks.html"},
-                    {text: "站点监控",link: "https://stats.uptimerobot.com/W0ZyWT6W70"}
+                    {text: "站点监控", link: "https://status.reday.asia/"}
                 ]
-            }
+            },
+
         ],
         // 博客配置
         blogConfig: {
@@ -129,7 +130,7 @@ module.exports = {
         valineConfig: {
             appId: 'sEH0f9Yv07EJH6PJX5VPpApE-gzGzoHsz',
             appKey: 'HFSmme1Q9TsSXSwEsl1tNDnK',
-            placeholder: '在昵称处输入QQ号可自动获取QQ头像哦~',
+            placeholder: '在昵称处填写QQ号自动获取邮箱和QQ昵称\n收到回复将会发送到您的邮箱\n请注意文明用语',
             //昵称框自动获取qq昵称和qq头像
             enableQQ: true,
             //验证码
@@ -263,13 +264,13 @@ module.exports = {
                     cover: "https://assets.smallsunnyfox.com/music/2.jpg"
                 }],
             // 是否默认缩小
-            autoShrink: false,
+            autoShrink: true,
             // 缩小时缩为哪种模式
             shrinkMode: "float",
             // 悬浮窗样式
             floatStyle: {bottom: "20px", "z-index": "999999"},
             //自动播放
-            autoplay: true
+            autoplay: false
         }],
         //著作权信息
         ['copyright', {

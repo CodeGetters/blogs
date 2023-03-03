@@ -21,16 +21,47 @@ const partner = [
         link: 'https://www.pikamumu.top',
     },
     {
-        title: '老陈笔记',
-        desc: '一点一滴都是进步',
-        avatar: 'http://www.weblearn.fit/favicon.ico',
-        link: 'http://www.weblearn.fit/'
-    },
-    {
         title: "cosの博客",
         desc: "WA的一声就哭了",
         avatar: "https://ysx.cosine.ren/img/avatar.jpg",
         link: "https://ysx.cosine.ren/",
+    },
+
+]
+
+const prePartner = [
+    {
+        title: "张时贰",
+        link: "https://zhangshier.vip",
+        avatar: "https://q1.qlogo.cn/g?b=qq&nk=1310446718&s=5",
+        desc: "环转码，爱敲代码的小张！"
+    },
+    {
+        title: "青灯暮雨",
+        link: "https://www.blatr.cn",
+        avatar: "https://www.blatr.cn/images/adminAvatar.jpg",
+        desc: "再渺小的星光，也有属于它的光芒"
+    },
+    {
+        title: "关关和六六",
+        link: "https://www.gmcllp.cn",
+        desc: "向世界分享我们的故事",
+        avatar: "https://www.gmcllp.cn/logo-y.png"
+    },
+    {
+        title: "初心博客",
+        link: "https://blog.52cxwl.cn/",
+        avatar: "https://blog.52cxwl.cn/logo.png",
+        desc: "快乐源于分享"
+    }
+]
+
+const recommend=[
+    {
+        title: '老陈笔记',
+        desc: '一点一滴都是进步',
+        avatar: 'http://www.weblearn.fit/favicon.ico',
+        link: 'http://www.weblearn.fit/'
     },
     {
         title: "Revincx",
@@ -43,16 +74,13 @@ const partner = [
         desc: "故事由我书写，旅程由你见证，传奇由她聆听",
         avatar: "https://cdn.staticaly.com/gh/Kele-Bingtang/static@master/user/avatar2.png",
         link: "https://notes.youngkbt.cn/"
-    },
-    {
-        title: "张时贰",
-        link: "https://zhangshier.vip",
-        avatar: "https://q1.qlogo.cn/g?b=qq&nk=1310446718&s=5",
-        desc: "环转码，爱敲代码的小张！"
     }
+
 ]
 
 export {
     theme,
-    partner
+    partner,
+    prePartner,
+    recommend
 }
