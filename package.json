@@ -28,6 +28,7 @@
     "vuepress-plugin-cursor-effects": "^1.1.6",
     "vuepress-plugin-nuggets-style-copy": "^1.0.3",
     "vuepress-plugin-sakura": "^1.2.1",
+    "vuepress-plugin-seo1": "^1.31.0-beta.1",
     "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress-plugin-smooth-scroll": "^0.0.10"
   },

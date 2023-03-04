@@ -1,15 +1,30 @@
 <template>
   <div class="timeLine-content">
-  <span class="archives">
-    {{ data }}
-  </span>
-    {{ title }}
+    <a :href="link" class="timeLine-link" style="text-decoration: none">
+      <span class="archives">{{ data }}</span>
+      <span class="title">{{ title }}</span>
+    </a>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['data', 'title']
+  props: {
+    link: {
+      type: String,
+      required: true,
+      default: "JavaScript:;"
+    },
+    data: {
+      type: String,
+      required: true,
+      default: ""
+    },
+    title: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
 
