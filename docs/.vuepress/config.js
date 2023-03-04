@@ -107,6 +107,7 @@ module.exports = {
                 items: [
                     {text: "关于我", link: "/view/aboutMyself.html"},
                     {text: "友人帐", link: "/view/friendLinks.html"},
+                    {text: "建站史", link: "/view/aboutSite.html"},
                     {text: "站点监控", link: "https://status.reday.asia/"}
                 ]
             },
@@ -287,7 +288,15 @@ module.exports = {
         {
             name: 'custom-plugins',
             globalUIComponents: ["GlobalTip"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
-        }
+        },
+        [
+            "seo1",
+            {
+                hostname:"https://reday.asia",
+                author:"JohnsonXin",
+                restrictions:"13+"
+            },
+        ],
     ]
 }
 

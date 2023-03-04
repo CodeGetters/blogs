@@ -37,7 +37,7 @@
 
     <div  class="container">
       <span class="link-title">特别感谢</span>
-      <span class="link-desc">有这两个大佬的存在，才会有了本站~</span>
+      <span class="link-desc">有他们的存在，才会有了本站~</span>
       <FriendLink v-for="(item, key) in theme"
                   :key="key"
                   :title="item.title"
@@ -53,7 +53,7 @@
 <script>
 import FriendLink from "./FriendLink.vue";
 
-import {recommend,partner, prePartner, theme} from "../../friendInfo/friendLinks.js";
+import {recommend,partner, prePartner, theme} from "../../Info/friendLinks.js";
 
 export default {
   setup() {

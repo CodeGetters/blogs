@@ -1,6 +1,6 @@
 <template>
   <div>
-    还在手打中...
+    还在筹备中...
     <a href="https://github.com/CodeGetters" target="_blank">
       <div class="snk-pic">
         <div class="light-snk">
