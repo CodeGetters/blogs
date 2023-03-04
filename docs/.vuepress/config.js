@@ -251,30 +251,66 @@ module.exports = {
             zIndex: 999999999, // z-index property of the canvas, default: 999999999
         }],
         //音乐播放器
-        ["@vuepress-reco/vuepress-plugin-bgm-player", {
-            audios: [
-                {
-                    name: "萤火之森",
-                    artist: "CMJ",
-                    url: "https://assets.smallsunnyfox.com/music/3.mp3",
-                    cover: "https://txy.reday.asia/images/202302161730108.jpg"
+        //["@vuepress-reco/vuepress-plugin-bgm-player", {
+        //    audios: [
+        //        {
+        //            name: "萤火之森",
+        //            artist: "CMJ",
+        //            url: "https://assets.smallsunnyfox.com/music/3.mp3",
+        //            cover: "https://txy.reday.asia/images/202302161730108.jpg"
+        //
+        //        },
+        //        {
+        //            name: "我再没见过 像你一般的星空",
+        //            artist: "Seto",
+        //            url: "https://assets.smallsunnyfox.com/music/2.mp3",
+        //            cover: "https://assets.smallsunnyfox.com/music/2.jpg"
+        //        }],
+        //    // 是否默认缩小
+        //    autoShrink: true,
+        //    // 缩小时缩为哪种模式
+        //    shrinkMode: "float",
+        //    // 悬浮窗样式
+        //    floatStyle: {bottom: "20px", "z-index": "999999"},
+        //    //自动播放
+        //    autoplay: false
+        //}],
+        [
+            'meting',
+            {
 
+                //metingApi: 'https://api.injahow.cn/meting/',
+                meting:{
+                    ////音乐源-netease(网易)-tencent-kugou-kuwo-baidu
+                    server:'netease',
+                    ////资源类型-song-album-artist-playlist
+                    ////播放列表、单曲、专辑等
+                    type:'playlist',
+                    ////资源id
+                    mid:'7389432797'
+                    //auto:"https://music.163.com/#/my/m/music/playlist?id=7389432797"
                 },
-                {
-                    name: "我再没见过 像你一般的星空",
-                    artist: "Seto",
-                    url: "https://assets.smallsunnyfox.com/music/2.mp3",
-                    cover: "https://assets.smallsunnyfox.com/music/2.jpg"
-                }],
-            // 是否默认缩小
-            autoShrink: true,
-            // 缩小时缩为哪种模式
-            shrinkMode: "float",
-            // 悬浮窗样式
-            floatStyle: {bottom: "20px", "z-index": "999999"},
-            //自动播放
-            autoplay: false
-        }],
+                aplayer:{
+                    //设置 lrc 歌词解析模式
+                    lrcType: 3,
+                    //设置音频的预加载模式
+                    preload:"auto",
+                    //设置播放器的初始顺序模式
+                    order:"random",
+                    //设置播放器的初始循环模式
+                    loop:"all",
+                    autoplay:true,
+                    //是否开启迷你模式
+                    //mini:true,
+                    //是否开启吸底模式
+                    //fixed:true
+                },
+                mobile:{
+                    cover: false,
+                    lrc:true
+                }
+            }
+        ],
         //著作权信息
         ['copyright', {
             // 选中的文字将无法被复制
@@ -296,7 +332,7 @@ module.exports = {
             {
                 hostname:"https://reday.asia",
                 author:"JohnsonXin",
-                restrictions:"13+"
+                restrictions:"16+"
             },
         ],
     ]
