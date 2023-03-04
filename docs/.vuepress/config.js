@@ -32,7 +32,7 @@ module.exports = {
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?2465e092f70686717972961b02e1076a"; 
+          hm.src = "https://hm.baidu.com/hm.js?bd54241f282e3115d4d11b5e182cd52a"; 
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();`]
@@ -107,9 +107,10 @@ module.exports = {
                 icon: "reco-mail",
                 items: [
                     {text: "关于我", link: "/view/aboutMyself.html"},
+                    {text: "碎碎念念", link: "/view/moodWall.html"},
                     {text: "友人帐", link: "/view/friendLinks.html"},
                     {text: "建站史", link: "/view/aboutSite.html"},
-                    {text: "站点监控", link: "https://status.reday.asia/"}
+                    {text: "站点监控", link: "https://kuma.reday.asia/status/page"}
                 ]
             },
 
