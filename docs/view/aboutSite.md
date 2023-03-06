@@ -24,9 +24,14 @@ date: 2023-03-04
 
 <TimeLine title="网站运行时长"/>
 
-### 展望未来(不停画大饼~)
+<TimeLine title="RSS订阅"/>
 
-<TimeLine title="站点信息"/>
+<TimeLine title="首页站点信息"/>
+
+<TimeLine title="同时在线人数显示"/>
+
+
+### 展望未来(不停画大饼~)
 
 <TimeLine title="网站公告"/>
 
@@ -38,7 +43,6 @@ date: 2023-03-04
 
 <TimeLine title="首页倒计时"/>
 
-<TimeLine title="RSS订阅"/>
 
 
 ## 站点时间线
@@ -72,3 +76,5 @@ date: 2023-03-04
 <TimeLine data="2023-03-01" title="添加全局时间提醒，网站公安备案成功"/>
 
 <TimeLine data="2023-03-02" title="添加友链监控"/>
+
+<TimeLine data="2023-03-06" title="RSS订阅、站点信息、同时在线人数"/>

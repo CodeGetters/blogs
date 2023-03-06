@@ -2,15 +2,16 @@
   <div class="web-info card-box">
     <div class="webinfo-title">
       <i
-        class="iconfont icon-award"
-        style="font-size: 0.875rem; font-weight: 900; width: 1.25em"
+          class="iconfont icon-award"
+          style="font-size: 0.875rem; font-weight: 900; width: 1.25em"
       ></i>
       <span>站点信息</span>
     </div>
-    <!--<div class="webinfo-item">-->
-    <!--  <div class="webinfo-item-title">文章数目：</div>-->
-    <!--  <div>{{ homeBlogCfg.article }} 篇</div>-->
-    <!--</div>-->
+
+    <div class="webinfo-item">
+      <div class="webinfo-item-title">文章数目：</div>
+      <div class="webinfo-content">{{ $recoPosts.length }} 篇</div>
+    </div>
 
     <div class="webinfo-item">
       <div class="webinfo-item-title">运行时间：</div>
@@ -35,7 +36,7 @@
       <div class="webinfo-item-title">本站被访问了：</div>
       <div class="webinfo-content">
         <span id="busuanzi_value_site_pv" class="web-site-pv"
-          ><i title="正在获取..." class="loading iconfont icon-loading"></i>
+        ><i title="正在获取..." class="loading iconfont icon-loading"></i>
         </span>
         次
       </div>
@@ -45,24 +46,23 @@
       <div class="webinfo-item-title">本站曾来访过：</div>
       <div class="webinfo-content busuanzi">
         <span id="busuanzi_value_site_uv" class="web-site-uv"
-          ><i title="正在获取..." class="loading iconfont icon-loading"></i>
+        ><i title="正在获取..." class="loading iconfont icon-loading"></i>
         </span>
         人
       </div>
+    </div>
+    <div class="peopleCount">
+      <iframe frameborder=0 height=60px marginwidth=0 scrolling=no
+              src="https://time-counter.onmicrosoft.cn/room/redayasia"></iframe>
     </div>
   </div>
 </template>
 
 <script>
-import { dayDiff, timeDiff, lastUpdatePosts } from "../theme/helpers/timeFormat.js";
+import {dayDiff, lastUpdatePosts, timeDiff} from "../theme/helpers/timeFormat.js";
 // 统计量
 import fetch from "../theme/helpers/busuanzi.js";
 export default {
-  //setup(ctx){
-  //  const {root: _this} = ctx
-  //  const homeBlogCfg = computed(() => _this.$recoLocales.homeBlog)
-  //  return {homeBlogCfg}
-  //},
   data() {
     return {
       // markdown 文档总数
@@ -98,11 +98,11 @@ export default {
       if (mdFileCountType !== "archives") {
         // 修改处
         if (mdFileCountType)
-        this.mdFileCount = mdFileCountType.length;
+          this.mdFileCount = mdFileCountType.length;
       } else {
         // 修改处
         if (this.$filterPosts)
-        this.mdFileCount = this.$filterPosts.length;
+          this.mdFileCount = this.$filterPosts.length;
       }
       if (totalWords === "archives" && eachFileWords) {
         let archivesWords = 0;
@@ -111,8 +111,8 @@ export default {
             archivesWords += itemFile.wordsCount;
           } else {
             let wordsCount = itemFile.wordsCount.slice(
-              0,
-              itemFile.wordsCount.length - 1
+                0,
+                itemFile.wordsCount.length - 1
             );
             archivesWords += wordsCount * 1000;
           }
@@ -121,14 +121,14 @@ export default {
       } else if (totalWords === "archives") {
         this.totalWords = 0;
         console.log(
-          "如果 totalWords = 'archives'，必须传入 eachFileWords，显然您并没有传入！"
+            "如果 totalWords = 'archives'，必须传入 eachFileWords，显然您并没有传入！"
         );
       } else {
         this.totalWords = totalWords;
       }
       // 最后一次活动时间
       if (this.$lastUpdatePosts)
-      this.lastActiveDate = timeDiff(this.$lastUpdatePosts[0].lastUpdated);
+        this.lastActiveDate = timeDiff(this.$lastUpdatePosts[0].lastUpdated);
       this.mountedWebInfo(moutedEvent);
       // 获取访问量和排名
       this.indexView = indexView === undefined ? true : indexView;
@@ -148,21 +148,14 @@ export default {
         if (tagsWrapper && webInfo) {
           if (!this.isSiblilngNode(tagsWrapper, webInfo)) {
             tagsWrapper.parentNode.insertBefore(
-              webInfo,
-              tagsWrapper.nextSibling
+                webInfo,
+                tagsWrapper.nextSibling
             );
             clearInterval(interval);
           }
         }
       }, 200);
     },
-    /**
-     * 挂载在兄弟元素后面，说明当前组件是 siblingNode 变量
-     */
-    isSiblilngNode(element, siblingNode) {
-      return element.siblingNode === siblingNode;
-    },
-
     /**
      * @description 首页的统计量
      * @param iterationTime
@@ -178,18 +171,18 @@ export default {
         let indexUv = document.querySelector(".web-site-pv");
         let indexPv = document.querySelector(".web-site-uv");
         if (
-          indexPv &&
-          indexUv &&
-          indexPv.innerText === "" &&
-          indexUv.innerText === ""
+            indexPv &&
+            indexUv &&
+            indexPv.innerText === "" &&
+            indexUv.innerText === ""
         ) {
           let interval = setInterval(() => {
             // 再次判断原因：防止进入 setInterval 的瞬间，访问量获取成功
             if (
-              indexPv &&
-              indexUv &&
-              indexPv.innerText === "" &&
-              indexUv.innerText === ""
+                indexPv &&
+                indexUv &&
+                indexPv.innerText === "" &&
+                indexUv.innerText === ""
             ) {
               i += iterationTime;
               if (i > iterationTime * 5) {
@@ -224,27 +217,37 @@ export default {
 </script>
 
 <style scoped>
+.peopleCount iframe {
+  width: 254px;
+  padding-top: 10px;
+}
+
 .web-info {
   font-size: 0.875rem;
   padding: 0.95rem;
 }
+
 .webinfo-title {
   text-align: center;
   color: #888;
   font-weight: bold;
   padding: 0 0 10px 0;
 }
+
 .webinfo-item {
   padding: 8px 0 0;
   margin: 0;
 }
+
 .webinfo-item-title {
   display: inline-block;
 }
+
 .webinfo-content {
   display: inline-block;
   float: right;
 }
+
 @keyframes turn {
   0% {
     transform: rotate(0deg);
@@ -253,6 +256,7 @@ export default {
     transform: rotate(360deg);
   }
 }
+
 .loading {
   display: inline-block;
   animation: turn 1s linear infinite;

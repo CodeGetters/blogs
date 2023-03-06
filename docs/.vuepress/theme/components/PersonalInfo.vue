@@ -54,8 +54,6 @@ export default defineComponent({
       return item
     }))
 
-
-
     return {homeBlogCfg, socialLinks}
   }
 })
