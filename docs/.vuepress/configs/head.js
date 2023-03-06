@@ -1,5 +1,5 @@
 module.exports = [
-    ['link', {rel: 'icon', href: '../public/favicon.ico'}],
+    ['link', {rel: 'icon', href: './favicon.ico'}],
     //移动端优化
     ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}],
     //搜索关键字
@@ -7,7 +7,7 @@ module.exports = [
     //pwa
     ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
     ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
-    ['link', {rel: 'manifest', href: '../public/manifest.json'}],
+    ['link', {rel: 'manifest', href: './manifest.json'}],
     //algolia
     ['link', {rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3"}],
     ['script', {src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3"}],
