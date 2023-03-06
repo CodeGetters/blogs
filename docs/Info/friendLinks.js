@@ -53,6 +53,12 @@ const prePartner = [
         link: "https://blog.52cxwl.cn/",
         avatar: "https://blog.52cxwl.cn/logo.png",
         desc: "快乐源于分享"
+    },
+    {
+        title: "Zkeq",
+        link:"https://icodeq.com/",
+        avatar: "https://img.onmicrosoft.cn/Avatar.jpg",
+        desc: "Zkeq の Coding 日志"
     }
 ]
 
