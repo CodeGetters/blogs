@@ -1,6 +1,6 @@
-var bszCaller, bszTag, scriptTag, ready;
+let bszCaller, bszTag, scriptTag, ready;
 
-var t,
+let t,
   e,
   n,
   a = !1,
@@ -21,7 +21,7 @@ if (typeof document !== "undefined") {
     );
   }),
     (e = function () {
-      for (var t = 0, e = c.length; t < e; t++) c[t].apply(document);
+      for (let t = 0, e = c.length; t < e; t++) c[t].apply(document);
       c = [];
     }),
     (n = function () {
@@ -32,7 +32,7 @@ if (typeof document !== "undefined") {
           ? document.removeEventListener("DOMContentLoaded", n, !1)
           : document.attachEvent &&
             (document.detachEvent("onreadystatechange", n),
-            window == window.top && (clearInterval(t), (t = null))));
+            window === window.top && (clearInterval(t), (t = null))));
     }),
     document.addEventListener
       ? document.addEventListener("DOMContentLoaded", n, !1)
@@ -40,7 +40,7 @@ if (typeof document !== "undefined") {
         (document.attachEvent("onreadystatechange", function () {
           /loaded|complete/.test(document.readyState) && n();
         }),
-        window == window.top &&
+        window === window.top &&
           (t = setInterval(function () {
             try {
               a || document.documentElement.doScroll("left");
@@ -53,7 +53,7 @@ if (typeof document !== "undefined") {
 
 bszCaller = {
   fetch: function (t, e) {
-    var n = "BusuanziCallback_" + Math.floor(1099511627776 * Math.random());
+    let n = "BusuanziCallback_" + Math.floor(1099511627776 * Math.random());
     t = t.replace("=BusuanziCallback", "=" + n);
     (scriptTag = document.createElement("SCRIPT")),
       (scriptTag.type = "text/javascript"),
@@ -83,19 +83,19 @@ bszTag = {
   bszs: ["site_pv", "page_pv", "site_uv"],
   texts: function (n) {
     this.bszs.map(function (t) {
-      var e = document.getElementById("busuanzi_value_" + t);
+      let e = document.getElementById("busuanzi_value_" + t);
       e && (e.innerHTML = n[t]);
     });
   },
   hides: function () {
     this.bszs.map(function (t) {
-      var e = document.getElementById("busuanzi_container_" + t);
+      let e = document.getElementById("busuanzi_container_" + t);
       e && (e.style.display = "none");
     });
   },
   shows: function () {
     this.bszs.map(function (t) {
-      var e = document.getElementById("busuanzi_container_" + t);
+      let e = document.getElementById("busuanzi_container_" + t);
       e && (e.style.display = "inline");
     });
   },

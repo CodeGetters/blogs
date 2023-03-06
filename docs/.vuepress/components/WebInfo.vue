@@ -7,15 +7,15 @@
       ></i>
       <span>站点信息</span>
     </div>
-    <div class="webinfo-item">
-      <div class="webinfo-item-title">文章数目：</div>
-      <div class="webinfo-content">{{ mdFileCount }} 篇</div>
-    </div>
+    <!--<div class="webinfo-item">-->
+    <!--  <div class="webinfo-item-title">文章数目：</div>-->
+    <!--  <div>{{ homeBlogCfg.article }} 篇</div>-->
+    <!--</div>-->
 
     <div class="webinfo-item">
       <div class="webinfo-item-title">运行时间：</div>
       <div class="webinfo-content">
-        {{ createToNowDay != 0 ? createToNowDay + " 天" : "不到一天" }}
+        {{ createToNowDay !== 0 ? createToNowDay + " 天" : "不到一天" }}
       </div>
     </div>
 
@@ -27,7 +27,7 @@
     <div class="webinfo-item">
       <div class="webinfo-item-title">最后活动时间：</div>
       <div class="webinfo-content">
-        {{ lastActiveDate == "刚刚" ? "刚刚" : lastActiveDate + "前" }}
+        {{ lastActiveDate === "刚刚" ? "刚刚" : lastActiveDate + "前" }}
       </div>
     </div>
 
@@ -54,16 +54,27 @@
 </template>
 
 <script>
-import { dayDiff, timeDiff, lastUpdatePosts } from "../utils/timeFormat.js";
-import fetch from "../utils/busuanzi"; // 统计量
+import { dayDiff, timeDiff, lastUpdatePosts } from "../theme/helpers/timeFormat.js";
+// 统计量
+import fetch from "../theme/helpers/busuanzi.js";
 export default {
+  //setup(ctx){
+  //  const {root: _this} = ctx
+  //  const homeBlogCfg = computed(() => _this.$recoLocales.homeBlog)
+  //  return {homeBlogCfg}
+  //},
   data() {
     return {
-      mdFileCount: 0, // markdown 文档总数
-      createToNowDay: 0, // 博客创建时间距今多少天
-      lastActiveDate: "", // 最后活动时间
-      totalWords: 0, // 本站总字数
-      indexView: true, // 开启访问量和排名统计
+      // markdown 文档总数
+      mdFileCount: 0,
+      // 博客创建时间距今多少天
+      createToNowDay: 0,
+      // 最后活动时间
+      lastActiveDate: "",
+      // 本站总字数
+      totalWords: 0,
+      // 开启访问量和排名统计
+      indexView: true,
     };
   },
   computed: {
@@ -84,7 +95,7 @@ export default {
         indexView,
       } = this.$themeConfig.blogInfo;
       this.createToNowDay = dayDiff(blogCreate);
-      if (mdFileCountType != "archives") {
+      if (mdFileCountType !== "archives") {
         // 修改处
         if (mdFileCountType)
         this.mdFileCount = mdFileCountType.length;
@@ -93,7 +104,7 @@ export default {
         if (this.$filterPosts)
         this.mdFileCount = this.$filterPosts.length;
       }
-      if (totalWords == "archives" && eachFileWords) {
+      if (totalWords === "archives" && eachFileWords) {
         let archivesWords = 0;
         eachFileWords.forEach((itemFile) => {
           if (itemFile.wordsCount < 1000) {
@@ -107,7 +118,7 @@ export default {
           }
         });
         this.totalWords = Math.round(archivesWords / 100) / 10 + "k";
-      } else if (totalWords == "archives") {
+      } else if (totalWords === "archives") {
         this.totalWords = 0;
         console.log(
           "如果 totalWords = 'archives'，必须传入 eachFileWords，显然您并没有传入！"
@@ -116,10 +127,11 @@ export default {
         this.totalWords = totalWords;
       }
       // 最后一次活动时间
+      if (this.$lastUpdatePosts)
       this.lastActiveDate = timeDiff(this.$lastUpdatePosts[0].lastUpdated);
       this.mountedWebInfo(moutedEvent);
       // 获取访问量和排名
-      this.indexView = indexView == undefined ? true : indexView;
+      this.indexView = indexView === undefined ? true : indexView;
       if (this.indexView) {
         this.getIndexViewCouter(indexIteration);
       }
@@ -148,19 +160,18 @@ export default {
      * 挂载在兄弟元素后面，说明当前组件是 siblingNode 变量
      */
     isSiblilngNode(element, siblingNode) {
-      if (element.siblingNode == siblingNode) {
-        return true;
-      } else {
-        return false;
-      }
+      return element.siblingNode === siblingNode;
     },
+
     /**
-     * 首页的统计量
+     * @description 首页的统计量
+     * @param iterationTime
      */
+
     getIndexViewCouter(iterationTime = 3000) {
       fetch();
-      var i = 0;
-      var defaultCouter = "9999";
+      let i = 0;
+      let defaultCouter = "9999";
       // 如果只需要第一次获取数据（可能获取失败），可注释掉 setTimeout 内容，此内容是第一次获取失败后，重新获取访问量
       // 可能会导致访问量再次 + 1 原因：取决于 setTimeout 的时间（需求调节），setTimeout 太快导致第一个获取的数据没返回，就第二次获取，导致结果返回 + 2 的数据
       setTimeout(() => {
@@ -169,16 +180,16 @@ export default {
         if (
           indexPv &&
           indexUv &&
-          indexPv.innerText == "" &&
-          indexUv.innerText == ""
+          indexPv.innerText === "" &&
+          indexUv.innerText === ""
         ) {
           let interval = setInterval(() => {
             // 再次判断原因：防止进入 setInterval 的瞬间，访问量获取成功
             if (
               indexPv &&
               indexUv &&
-              indexPv.innerText == "" &&
-              indexUv.innerText == ""
+              indexPv.innerText === "" &&
+              indexUv.innerText === ""
             ) {
               i += iterationTime;
               if (i > iterationTime * 5) {
@@ -186,7 +197,7 @@ export default {
                 indexUv.innerText = defaultCouter;
                 clearInterval(interval); // 5 次后无法获取，则取消获取
               }
-              if (indexPv.innerText == "" && indexUv.innerText == "") {
+              if (indexPv.innerText === "" && indexUv.innerText === "") {
                 // 手动获取访问量
                 fetch();
               } else {

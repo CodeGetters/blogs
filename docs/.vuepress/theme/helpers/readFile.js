@@ -3,29 +3,37 @@ const path = require('path'); // 路径模块
 const matter = require('gray-matter'); // FrontMatter解析器 https://github.com/jonschlinkert/gray-matter
 const chalk = require('chalk') // 命令行打印美化
 const log = console.log
-const docsRoot = path.join(__dirname, '..', '..', '..', 'docs'); // docs文件路径
+const docsRoot = path.join(__dirname, '..', '..', '..'); // docs文件路径
 
 /**
- * 获取本站的文章数据
- * 获取所有的 md 文档，可以排除指定目录下的文档
+ *
+ * @param excludeFiles 排除文件
+ * @param dir
+ * @param filesList
+ * @return {*[]}
+ * @description   获取本站的文章数据：获取所有的 md 文档，可以排除指定目录下的文档
+ *
  */
 function readFileList(excludeFiles = [''], dir = docsRoot, filesList = []) {
   const files = fs.readdirSync(dir);
   files.forEach((item, index) => {
     let filePath = path.join(dir, item);
     const stat = fs.statSync(filePath);
+    log('stat'+stat)
     if (!(excludeFiles instanceof Array)) {
       log(chalk.yellow(`error: 传入的参数不是一个数组。`))
     }
     excludeFiles.forEach((excludeFile) => {
       if (stat.isDirectory() && item !== '.vuepress' && item !== '@pages' && item !== excludeFile) {
-        readFileList(excludeFiles, path.join(dir, item), filesList);  //递归读取文件
+        //递归读取文件
+        readFileList(excludeFiles, path.join(dir, item), filesList);
       } else {
-        if (path.basename(dir) !== 'docs') { // 过滤 docs目录级下的文件
-
+        // 过滤 docs目录级下的文件
+        if (path.basename(dir) !== 'docs') {
           const fileNameArr = path.basename(filePath).split('.')
           let name = null, type = null;
-          if (fileNameArr.length === 2) { // 没有序号的文件
+          // 没有序号的文件
+          if (fileNameArr.length === 2) {
             name = fileNameArr[0]
             type = fileNameArr[1]
           } else if (fileNameArr.length === 3) { // 有序号的文件
