@@ -23,5 +23,5 @@ module.exports = [
           hm.src = "https://hm.baidu.com/hm.js?bd54241f282e3115d4d11b5e182cd52a"; 
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
-        })();`]
+        })();`],
 ]

@@ -133,16 +133,16 @@ module.exports = [
             restrictions: "16+"
         },
     ],
-    ['feed',
-        {
-            canonical_base: 'https://reday.asia',
-            count: 5000
-        }
-    ],
     ['autometa', {
         site: {
             name: 'JohnsonXin'
         },
         canonical_base: 'https://reday.asia'
     }],
+    // 百度自动推送
+    'vuepress-plugin-baidu-autopush',
+    ['@vuepress-reco/vuepress-plugin-rss', {
+        site_url: 'https://reday.asia',
+        count:1000
+    }]
 ]

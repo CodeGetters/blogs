@@ -1,4 +1,3 @@
-//const {readFileList, readTotalFileWords, readEachFileWords} = require('./theme/helpers/readFile.js');
 const head = require('./configs/head.js');
 const themeConfig = require('./configs/themeConfig.js');
 const plugins=require('./configs/plugin.js')
