@@ -2,12 +2,15 @@
 title: 'Vue.js设计与实现'
 date: 2023-02-22
 categories:
-- 前端
+  - 前端
 tags:
-- Vue
-- 面包屋
+  - Vue
+  - 面包屋
 sidebar: true
 isShowComments: true
+feed:
+  enable:true
+description: Vue.js设计与实现
 ---
 [[toc]]
 
