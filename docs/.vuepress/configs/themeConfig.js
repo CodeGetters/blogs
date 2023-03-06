@@ -1,4 +1,4 @@
-const {readFileList, readTotalFileWords, readEachFileWords} = require('../utils/readFile.js');
+const {readFileList, readTotalFileWords, readEachFileWords} = require('../theme/helpers/readFile.js');
 
 module.exports = {
     // 站点配置（首页 & 文章页）
@@ -17,8 +17,6 @@ module.exports = {
         mdFileCountType: 'archives',
         // 开启本站文档总字数。1. archives 获取归档的文档数（使用 archives 条件：传入 eachFileWords，否则报错）。2. readTotalFileWords(['xx']) 排除 xx 目录（可多个，可不传参数），获取其他目录的文章字数。无默认值
         totalWords: 'archives',
-        // 首页的站点模块挂载在某个元素后面（支持多种选择器），指的是挂载在哪个兄弟元素的后面，默认是热门标签 '.tags-wrapper' 下面，提示：'.categories-wrapper' 会挂载在文章分类下面。'.blogger-wrapper' 会挂载在博客头像模块下面
-        moutedEvent: '.categories-wrapper',
         // 下面两个选项：第一次获取访问量失败后的迭代时间
         indexIteration: 2500,   // 如果首页获取访问量失败，则每隔多少时间后获取一次访问量，直到获取成功或获取 10 次后。默认 3 秒。注意：设置时间太低，可能导致访问量 + 2、+ 3 ......
         pageIteration: 2500,    // 如果文章页获取访问量失败，则每隔多少时间后获取一次访问量，直到获取成功或获取 10 次后。默认 3 秒。注意：设置时间太低，可能导致访问量 + 2、+ 3 ......

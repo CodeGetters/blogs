@@ -63,7 +63,7 @@
           <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><reco-icon icon="reco-friend" /> {{homeBlogCfg.friendLink}}</h4>
           <FriendLink />
           <!--TODO:完善站点信息模块-->
-          <!--<SiteInfo/>-->
+          <WebInfo/>
         </div>
       </div>
     </ModuleTransition>
@@ -82,11 +82,11 @@ import pagination from '@theme/mixins/pagination'
 import { ModuleTransition, RecoIcon } from '@vuepress-reco/core/lib/components'
 import PersonalInfo from '@theme/components/PersonalInfo'
 import { getOneColor } from '@theme/helpers/other'
-import SiteInfo from "./SiteInfo.vue";
+import WebInfo from "../../components/WebInfo.vue";
 
 export default {
   mixins: [pagination],
-  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo, RecoIcon,SiteInfo },
+  components: { NoteAbstract, TagList, FriendLink, ModuleTransition, PersonalInfo, RecoIcon,WebInfo },
   data () {
     return {
       recoShow: false,
