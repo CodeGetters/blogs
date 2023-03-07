@@ -19,7 +19,6 @@
     "@vuepress/plugin-blog": "^1.9.4",
     "@vuepress/plugin-medium-zoom": "^1.9.9",
     "@vuepress/plugin-pwa": "^1.9.9",
-    "autometa": "^0.0.9",
     "docsearch.js": "^2.6.3",
     "md5": "^2.3.0",
     "vue-click-outside": "^1.1.0",

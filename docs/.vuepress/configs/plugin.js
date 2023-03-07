@@ -23,10 +23,6 @@ module.exports = [
     ['@vuepress-reco/vuepress-plugin-pagation', {
         perPage: 18
     }],
-    ['sitemap', {
-        hostname: 'https://reday.asia',
-        exclude: '/404.html'
-    }],
     //樱花飘落
     ["sakura", {
         // 默认数量
@@ -125,24 +121,13 @@ module.exports = [
         name: 'custom-plugins',
         globalUIComponents: ["GlobalTip"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
     },
-    [
-        "seo1",
-        {
-            hostname: "https://reday.asia",
-            author: "JohnsonXin",
-            restrictions: "16+"
-        },
-    ],
-    ['autometa', {
-        site: {
-            name: 'JohnsonXin'
-        },
-        canonical_base: 'https://reday.asia'
-    }],
     // 百度自动推送
     'vuepress-plugin-baidu-autopush',
     ['@vuepress-reco/vuepress-plugin-rss', {
         site_url: 'https://reday.asia',
-        count:1000
-    }]
+        count: 1000
+    }],
+    ['sitemap', {
+        hostname: 'https://reday.asia'
+    },]
 ]
