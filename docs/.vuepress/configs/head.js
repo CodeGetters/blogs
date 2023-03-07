@@ -24,4 +24,6 @@ module.exports = [
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();`],
+    //百度站长 https://ziyuan.baidu.com/
+    ['meta',{name:'baidu-site-verification',content: 'codeva-5ezxmXGAqd'}]
 ]
