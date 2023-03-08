@@ -13,17 +13,19 @@
     >
       {{ $themeConfig.author || $site.title }}
     </h3>
+
     <!--站点信息-->
-    <div class="num">
-      <div>
-        <h3>{{ $recoPosts.length }}</h3>
-        <h6>{{ homeBlogCfg.article }}</h6>
-      </div>
-      <div>
-        <h3>{{ $tags.list.length }}</h3>
-        <h6>{{ homeBlogCfg.tag }}</h6>
-      </div>
-    </div>
+    <!--<div class="num">-->
+    <!--  <div>-->
+    <!--    <h3>{{ $recoPosts.length }}</h3>-->
+    <!--    <h6>{{ homeBlogCfg.article }}</h6>-->
+    <!--  </div>-->
+    <!--  <div>-->
+    <!--    <h3>{{ $tags.list.length }}</h3>-->
+    <!--    <h6>{{ homeBlogCfg.tag }}</h6>-->
+    <!--  </div>-->
+    <!--</div>-->
+
     <!--链接-->
     <ul class="social-links">
       <li
@@ -76,7 +78,6 @@ export default defineComponent({
   }
 
   //站点信息
-
   .num {
     display flex
     margin 0 auto 1rem

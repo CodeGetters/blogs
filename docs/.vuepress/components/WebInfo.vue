@@ -25,12 +25,13 @@
       <div class="webinfo-content">{{ totalWords }} 字</div>
     </div>
 
-    <div class="webinfo-item">
-      <div class="webinfo-item-title">最后活动时间：</div>
-      <div class="webinfo-content">
-        {{ lastActiveDate === "刚刚" ? "刚刚" : lastActiveDate + "前" }}
-      </div>
-    </div>
+    <!--TODO：完善最近活动时间-->
+    <!--<div class="webinfo-item">-->
+    <!--  <div class="webinfo-item-title">最后活动时间：</div>-->
+    <!--  <div class="webinfo-content">-->
+    <!--    {{ lastActiveDate === "刚刚" ? "刚刚" : lastActiveDate + "前" }}-->
+    <!--  </div>-->
+    <!--</div>-->
 
     <div v-if="indexView" class="webinfo-item">
       <div class="webinfo-item-title">本站被访问了：</div>
@@ -51,6 +52,7 @@
         人
       </div>
     </div>
+
     <div class="peopleCount">
       <iframe frameborder=0 height=60px marginwidth=0 scrolling=no
               src="https://time-counter.onmicrosoft.cn/room/redayasia"></iframe>
@@ -62,6 +64,7 @@
 import {dayDiff, lastUpdatePosts, timeDiff} from "../theme/helpers/timeFormat.js";
 // 统计量
 import fetch from "../theme/helpers/busuanzi.js";
+
 export default {
   data() {
     return {
@@ -79,11 +82,11 @@ export default {
   },
   computed: {
     $lastUpdatePosts() {
-      return lastUpdatePosts(this.$filterPosts);
+      if (this.$filterPosts)
+        return lastUpdatePosts(this.$filterPosts);
     },
   },
   mounted() {
-    // Young Kbt
     if (Object.keys(this.$themeConfig.blogInfo).length > 0) {
       const {
         blogCreate,
@@ -94,13 +97,14 @@ export default {
         indexIteration,
         indexView,
       } = this.$themeConfig.blogInfo;
+      //博客搭建距今多少时间---通过比较计算
       this.createToNowDay = dayDiff(blogCreate);
+
+      //文档数目
       if (mdFileCountType !== "archives") {
-        // 修改处
         if (mdFileCountType)
           this.mdFileCount = mdFileCountType.length;
       } else {
-        // 修改处
         if (this.$filterPosts)
           this.mdFileCount = this.$filterPosts.length;
       }
@@ -117,6 +121,7 @@ export default {
             archivesWords += wordsCount * 1000;
           }
         });
+        //计算文档字数
         this.totalWords = Math.round(archivesWords / 100) / 10 + "k";
       } else if (totalWords === "archives") {
         this.totalWords = 0;
@@ -130,6 +135,7 @@ export default {
       if (this.$lastUpdatePosts)
         this.lastActiveDate = timeDiff(this.$lastUpdatePosts[0].lastUpdated);
       this.mountedWebInfo(moutedEvent);
+
       // 获取访问量和排名
       this.indexView = indexView === undefined ? true : indexView;
       if (this.indexView) {
@@ -139,7 +145,8 @@ export default {
   },
   methods: {
     /**
-     * 挂载站点信息模块
+     * @description 挂载站点信息模块
+     * @param moutedEvent
      */
     mountedWebInfo(moutedEvent = ".tags-wrapper") {
       let interval = setInterval(() => {
@@ -156,11 +163,11 @@ export default {
         }
       }, 200);
     },
+
     /**
      * @description 首页的统计量
      * @param iterationTime
      */
-
     getIndexViewCouter(iterationTime = 3000) {
       fetch();
       let i = 0;

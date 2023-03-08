@@ -32,6 +32,7 @@ date: 2023-03-04
 
 
 ### 展望未来(不停画大饼~)
+优先级：1
 
 <TimeLine title="网站公告"/>
 
@@ -43,7 +44,21 @@ date: 2023-03-04
 
 <TimeLine title="首页倒计时"/>
 
+<TimeLine title="访客IP地址"/>
 
+<TimeLine title="完善关于我的介绍"/>
+
+<TimeLine title="时间实时显示"/>
+
+优先级：2
+
+<TimeLine title="使用百度统计api一些功能"/>
+
+优先级：3
+
+<TimeLine title="迁移到vuepress2"/>
+
+<TimeLine title="迁移到astro"/>
 
 ## 站点时间线
 
@@ -78,3 +93,6 @@ date: 2023-03-04
 <TimeLine data="2023-03-02" title="添加友链监控"/>
 
 <TimeLine data="2023-03-06" title="RSS订阅、站点信息、同时在线人数"/>
+
+<TimeLine data="2023-03-06" title="SEO优化"/>
+

@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import { RecoIcon } from '@vuepress-reco/core/lib/components'
+import {RecoIcon} from '@vuepress-reco/core/lib/components'
 
 export default {
   components: { RecoIcon },
@@ -73,8 +73,7 @@ export default {
   },
   filters: {
     formatDateValue (value) {
-      let localDate = new Date(value).toJSON().split('T')[0]
-      return localDate
+      return new Date(value).toJSON().split('T')[0]
     }
   },
   methods: {
