@@ -15,6 +15,12 @@ module.exports = [
     ['meta', {name: 'referrer', content: 'no-referrer-when-downgrade'}],
     //图标
     ['link', {rel: "stylesheet", href: "//at.alicdn.com/t/c/font_3925150_svsn9ydx00l.css"}],
+    //百度站长 https://ziyuan.baidu.com/
+    ['meta', {name: 'baidu-site-verification', content: 'codeva-5ezxmXGAqd'}],
+    //bing站长https://www.bing.com/webmasters/home
+    ['meta', {name: "msvalidate.01", content: "3132814B85B3CBC1B556AA2537717180"}],
+    //360https://zhanzhang.so.com/
+    ['meta', {name: "360-site-verification", content: "1827e198fad3f154a5a9790d7f522384"}],
     //百度统计
     ['script', {}, `
         var _hmt = _hmt || [];
@@ -24,14 +30,4 @@ module.exports = [
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();`],
-    //百度站长 https://ziyuan.baidu.com/
-    ['meta', {name: 'baidu-site-verification', content: 'codeva-5ezxmXGAqd'}],
-    //bing站长https://www.bing.com/webmasters/home
-    ['meta', {name: "msvalidate.01", content: "3132814B85B3CBC1B556AA2537717180"}],
-    //google站长https://search.google.com/search-console
-    ['meta', {name: "google-site-verification", content: "4NM_CzOlmAYWgNiVKh5nT7HqQEAdDBISwOtChCFpoZE"}],
-    //360https://zhanzhang.so.com/
-    ['meta', {name: "360-site-verification", content: "1827e198fad3f154a5a9790d7f522384"}],
-    //搜狗https://zhanzhang.sogou.com/index.php/site/index
-    ['meta', {name: "sogou_site_verification", content: "nvQqq3kwZk"}]
 ]

@@ -1,4 +1,8 @@
-// 日期格式化(只获取年月日)
+/**
+ * @description 日期格式化(只获取年月日)
+ * @param date
+ * @return {string}
+ */
 export function dateFormat(date) {
     if (!(date instanceof Date)) {
         date = new Date(date);
@@ -6,7 +10,11 @@ export function dateFormat(date) {
     return `${date.getUTCFullYear()}-${zero(date.getUTCMonth() + 1)}-${zero(date.getUTCDate())}`;
 }
 
-// 小于10补0
+/**
+ * @description 小于10补0
+ * @param d
+ * @return {string}
+ */
 export function zero(d) {
     return d.toString().padStart(2, '0');
 }
@@ -18,12 +26,17 @@ export function zero(d) {
  * @description 计算最后活动时间
  */
 export function lastUpdatePosts(posts) {
-    //posts((prev, next) => {
-    //    return compareDate(prev, next);
-    //});
+    //posts is undefined
+    posts((prev, next) => {
+        return compareDate(prev, next);
+    });
 }
 
-// 获取时间的时间戳
+/**
+ * @description 获取时间的时间戳
+ * @param post
+ * @return {number}
+ */
 export function getTimeNum(post) {
     let dateStr = post.lastUpdated || post.frontmatter.date;
     let date = new Date(dateStr);
@@ -33,13 +46,21 @@ export function getTimeNum(post) {
     return date.getTime();
 }
 
-// 比对时间
+/**
+ * @description 比对时间
+ * @param a
+ * @param b
+ * @return {number}
+ */
 export function compareDate(a, b) {
     return getTimeNum(b) - getTimeNum(a);
 }
 
 /**
- * 获取两个日期相差多少天
+ * @description
+ * @param startDate 获取两个日期相差多少天
+ * @param endDate
+ * @return {number}
  */
 export function dayDiff(startDate, endDate) {
     if (!endDate) {
@@ -52,7 +73,10 @@ export function dayDiff(startDate, endDate) {
 }
 
 /**
- * 计算相差多少年/月/日/时/分/秒
+ * @description 计算相差多少年/月/日/时/分/秒
+ * @param startDate
+ * @param endDate
+ * @return {string}
  */
 export function timeDiff(startDate, endDate) {
     if (!endDate) {
@@ -85,7 +109,10 @@ export function timeDiff(startDate, endDate) {
 }
 
 /**
- * 判断当前月的天数（28、29、30、31）
+ * @description 判断当前月的天数（28、29、30、31）
+ * @param mouth
+ * @param year
+ * @return {number}
  */
 export function getDays(mouth, year) {
     let days = 30;
