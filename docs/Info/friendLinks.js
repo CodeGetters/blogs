@@ -59,6 +59,12 @@ const prePartner = [
         link:"https://icodeq.com/",
         avatar: "https://img.onmicrosoft.cn/Avatar.jpg",
         desc: "Zkeq の Coding 日志"
+    },
+    {
+        title: "前端历险记",
+        link:"https://sunny-117.github.io/blog/",
+        desc: "千锤万凿，你终成英雄",
+        avatar: "https://avatars.githubusercontent.com/u/73089592?v=4"
     }
 ]
 
@@ -80,8 +86,13 @@ const recommend=[
         desc: "故事由我书写，旅程由你见证，传奇由她聆听",
         avatar: "https://cdn.staticaly.com/gh/Kele-Bingtang/static@master/user/avatar2.png",
         link: "https://notes.youngkbt.cn/"
-    }
-
+    },
+    {
+        name:"飞鸟",
+        link: "https://lzxjack.top/",
+        avatar: "https://img.lzxjack.top/img/202203302154224.webp",
+        desc: "一只平凡的鸟罢了。"
+    },
 ]
 
 export {
