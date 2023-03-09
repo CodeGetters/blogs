@@ -22,7 +22,7 @@ import Reward from "./reward.vue";
 export default {
   name:"about",
   setup(){
-    return{Reward}
+    return {Reward}
   }
 }
 </script>
