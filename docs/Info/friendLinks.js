@@ -26,6 +26,18 @@ const partner = [
         avatar: "https://ysx.cosine.ren/img/avatar.jpg",
         link: "https://ysx.cosine.ren/",
     },
+    {
+        title: "lyuly",
+        desc: "行便是风",
+        avatar: "https://lyuly.com/logo.webp",
+        link: "https://lyuly.com/",
+    },
+    //{
+    //    title: "",
+    //    desc: "",
+    //    avatar: "",
+    //    link:"https://xlog.reday.asia"
+    //}
 
 ]
 
