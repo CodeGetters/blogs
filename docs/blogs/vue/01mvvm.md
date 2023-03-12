@@ -19,11 +19,25 @@ publish: false
 
 上面说了这么多，那什么是 MVVM？
 
-这是早期 Vue2 官方中的图：
+早期 Vue2 官方中的图：
 
 ![](https://pic4.zhimg.com/v2-30fd0bf6abc96531c157659cc74be2c7_r.jpg)
 
-* Model---数据
-* View---视图
-* ViewModel---中转站
+* Model---数据---script
+* View---视图---template
+* ViewModel---中转站---vue
   * 监听 model 中的数据的变化并控制 view 的更新，model 和 view 没有直接关系，是通过 vm 联系的，而 model 和 ViewModel 之间是双向绑定的关系
+  * Data Binding：将数据绑定到视图上
+
+## MVC
+
+前期比较流行的架构模式
+
+html---view
+
+js---controller
+
+## MVVM 相较于 MVC的优势
+
+1.实现数据与视图的分离
+2.通过数据来驱动视图，开发者只需要关心数据变化
