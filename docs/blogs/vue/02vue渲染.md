@@ -5,6 +5,7 @@ categories:
 - 前端
 tags:
 - vue
+next: ./03父子组件通信
 ---
 
 ## 别名的配置
