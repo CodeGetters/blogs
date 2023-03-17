@@ -8,55 +8,57 @@
       <span>站点信息</span>
     </div>
 
-    <div class="webinfo-item">
-      <div class="webinfo-item-title">文章数目：</div>
-      <div class="webinfo-content">{{ $recoPosts.length }} 篇</div>
-    </div>
+   <div class="webinfo-item-box">
+     <div class="webinfo-item">
+       <div class="webinfo-item-title">文章数目：</div>
+       <div class="webinfo-content">{{ $recoPosts.length }} 篇</div>
+     </div>
 
-    <div class="webinfo-item">
-      <div class="webinfo-item-title">运行时间：</div>
-      <div class="webinfo-content">
-        {{ createToNowDay !== 0 ? createToNowDay + " 天" : "不到一天" }}
-      </div>
-    </div>
+     <div class="webinfo-item">
+       <div class="webinfo-item-title">运行时间：</div>
+       <div class="webinfo-content">
+         {{ createToNowDay !== 0 ? createToNowDay + " 天" : "不到一天" }}
+       </div>
+     </div>
 
-    <div class="webinfo-item">
-      <div class="webinfo-item-title">本站字数累计：</div>
-      <div class="webinfo-content">{{ totalWords }} 字</div>
-    </div>
+     <div class="webinfo-item">
+       <div class="webinfo-item-title">本站字数累计：</div>
+       <div class="webinfo-content">{{ totalWords }} 字</div>
+     </div>
 
-    <!--TODO：完善最近活动时间-->
-    <!--<div class="webinfo-item">-->
-    <!--  <div class="webinfo-item-title">最后活动时间：</div>-->
-    <!--  <div class="webinfo-content">-->
-    <!--    {{ lastActiveDate === "刚刚" ? "刚刚" : lastActiveDate + "前" }}-->
-    <!--  </div>-->
-    <!--</div>-->
+     <!--TODO：完善最近活动时间-->
+     <!--<div class="webinfo-item">-->
+     <!--  <div class="webinfo-item-title">最后活动时间：</div>-->
+     <!--  <div class="webinfo-content">-->
+     <!--    {{ lastActiveDate === "刚刚" ? "刚刚" : lastActiveDate + "前" }}-->
+     <!--  </div>-->
+     <!--</div>-->
 
-    <div v-if="indexView" class="webinfo-item">
-      <div class="webinfo-item-title">本站被访问了：</div>
-      <div class="webinfo-content">
+     <div v-if="indexView" class="webinfo-item">
+       <div class="webinfo-item-title">本站被访问了：</div>
+       <div class="webinfo-content">
         <span id="busuanzi_value_site_pv" class="web-site-pv"
         ><i title="正在获取..." class="loading iconfont icon-loading"></i>
         </span>
-        次
-      </div>
-    </div>
+         次
+       </div>
+     </div>
 
-    <div v-if="indexView" class="webinfo-item">
-      <div class="webinfo-item-title">本站曾来访过：</div>
-      <div class="webinfo-content busuanzi">
+     <div v-if="indexView" class="webinfo-item">
+       <div class="webinfo-item-title">本站曾来访过：</div>
+       <div class="webinfo-content busuanzi">
         <span id="busuanzi_value_site_uv" class="web-site-uv"
         ><i title="正在获取..." class="loading iconfont icon-loading"></i>
         </span>
-        人
-      </div>
-    </div>
+         人
+       </div>
+     </div>
 
-    <div class="peopleCount">
-      <iframe frameborder=0 height=60px marginwidth=0 scrolling=no
-              src="https://time-counter.onmicrosoft.cn/room/redayasia"></iframe>
-    </div>
+     <div class="peopleCount">
+       <iframe frameborder=0 height=60px marginwidth=0 scrolling=no
+               src="https://time-counter.onmicrosoft.cn/room/redayasia"></iframe>
+     </div>
+   </div>
   </div>
 </template>
 
@@ -225,7 +227,7 @@ export default {
 
 <style scoped>
 .peopleCount iframe {
-  width: 254px;
+  width: 288px;
   padding-top: 10px;
 }
 
@@ -235,10 +237,14 @@ export default {
 }
 
 .webinfo-title {
-  text-align: center;
+  text-align: left;
   color: #888;
   font-weight: bold;
-  padding: 0 0 10px 0;
+  position: absolute;
+}
+
+.webinfo-item-box{
+  padding-top: 30px;
 }
 
 .webinfo-item {
@@ -253,6 +259,11 @@ export default {
 .webinfo-content {
   display: inline-block;
   float: right;
+}
+
+.peopleCount{
+  position: absolute;
+  left: 10px;
 }
 
 @keyframes turn {

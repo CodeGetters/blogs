@@ -53,7 +53,7 @@
 <script>
 import FriendLink from "./FriendLink.vue";
 
-import {recommend,partner, prePartner, theme} from "../../Info/friendLinks.js";
+import {recommend,partner, prePartner, theme} from "../../hooks/friendLinks.js";
 
 export default {
   setup() {

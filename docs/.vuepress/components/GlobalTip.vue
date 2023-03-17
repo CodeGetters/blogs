@@ -1,6 +1,8 @@
 <template>
 
 </template>
+
+
 <script>
 // 首页是否开启时间消息提示，默认 false。因为首页大图模块已经内置时间消息提示，所以这里不需要开启，如果您不使用首页大图模块，可以将此值设置为 true。
 const indexTip = false;
