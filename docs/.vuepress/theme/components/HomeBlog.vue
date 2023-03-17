@@ -46,8 +46,10 @@
         <div class="info-wrapper">
           <!--用户个人信息-->
           <PersonalInfo/>
+          <!--TODO:完善站点信息模块-->
+          <WebInfo/>
           <!--分类-->
-          <h4><reco-icon icon="reco-category" /> {{homeBlogCfg.category}}</h4>
+          <h4 class="category"><reco-icon icon="reco-category" /> {{homeBlogCfg.category}}</h4>
           <ul class="category-wrapper">
             <li class="category-item" v-for="(item, index) in this.$categories.list" :key="index">
               <router-link :to="item.path">
@@ -62,8 +64,6 @@
           <TagList @getCurrentTag="getPagesByTags" />
           <h4 v-if="$themeConfig.friendLink && $themeConfig.friendLink.length !== 0"><reco-icon icon="reco-friend" /> {{homeBlogCfg.friendLink}}</h4>
           <FriendLink />
-          <!--TODO:完善站点信息模块-->
-          <WebInfo/>
         </div>
       </div>
     </ModuleTransition>
@@ -232,7 +232,8 @@ export default {
       &:hover {
         box-shadow var(--box-shadow-hover)
       }
-      h4 {
+      h4.category {
+        padding-top 30px
         color var(--text-color)
       }
       .category-wrapper {
