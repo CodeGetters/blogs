@@ -1,12 +1,14 @@
 <template>
   <div class="personal-info-wrapper">
     <!--头像-->
-    <img
-        class="personal-img"
-        v-if="$themeConfig.authorAvatar"
-        :src="$withBase($themeConfig.authorAvatar)"
-        alt="author-avatar"
-    >
+    <a href="#" >
+      <img
+          class="personal-img"
+          v-if="$themeConfig.authorAvatar"
+          :src="$withBase($themeConfig.authorAvatar)"
+          alt="author-avatar"
+      >
+    </a>
     <h3
         class="name"
         v-if="$themeConfig.author || $site.title"
@@ -63,12 +65,19 @@ export default defineComponent({
 
 <style lang="stylus" scoped>
 .personal-info-wrapper {
+
   .personal-img {
     display block
     margin 2rem auto 1rem
     width 6rem
     height 6rem
     border-radius 50%
+
+    &:hover {
+      transform rotate(666turn)
+      transition-duration 59s
+      transition-timing-function cubic-bezier(.34, 0, .84, 1)
+    }
   }
 
   .name {
@@ -78,6 +87,7 @@ export default defineComponent({
   }
 
   //站点信息
+
   .num {
     display flex
     margin 0 auto 1rem

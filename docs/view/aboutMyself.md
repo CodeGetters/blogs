@@ -16,7 +16,7 @@ isShowComments: false
 
 <TimeLine title="理解MVVM框架"/>
 
-<TimeLine title="准备比赛"/>
+<TimeLine title="做项目"/>
 
 <TimeLine title="总结"/>
 
