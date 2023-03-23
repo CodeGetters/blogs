@@ -47,8 +47,7 @@ module.exports = {
             text: '笔记',
             icon: 'reco-document',
             items: [
-                {text: 'HTML', link: "/blogs/html/01.html"},
-                {text: "CSS", link: "/blogs/css/01.html"},
+                {text: "HTML&CSS", link: "/blogs/html+css/01解决浮动元素覆盖底部元素问题.html"},
                 {text: "JS", link: "/blogs/js/01.html"},
                 {text: "多人协作", link: "/blogs/cooperation/01Git.html"},
                 {text: "博客", link: "/blogs/useBlog/01使用vuepress打造属于自己的博客.html"},
