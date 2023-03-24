@@ -1,6 +1,5 @@
 <template>
   <div>
-    还在筹备中...
     <a href="https://github.com/CodeGetters" target="_blank">
       <div class="snk-pic">
         <div class="light-snk">
@@ -11,28 +10,50 @@
         </div>
       </div>
     </a>
-    <br>
-    <reward/>
+    <div class="container">
+      <AutomaticTypewriter class="autoType" :display-con="textCon"/>
+      <reward/>
+    </div>
   </div>
 </template>
 
 <script>
-import Reward from "./reward.vue";
+import reward from "./reward.vue";
+
+import AutomaticTypewriter from './AutomaticTypewriter.vue'
 
 export default {
-  name:"about",
-  setup(){
-    return {Reward}
+  name: "about",
+  components: {AutomaticTypewriter},
+  setup() {
+    const textCon = '欢迎你浏览我的博客，这里主要会记录自己的成长记录，你的喜欢是我保持继续前行的动力。'
+    return {reward, textCon}
   }
 }
 </script>
 
 <style scoped>
-.light .dark-snk{
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.autoType {
+  width: 400px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+.light .dark-snk {
   display: none;
 }
 
-.dark .light-snk{
+.dark .light-snk {
   display: none;
+}
+
+.dark .autoType {
+  background-color: #000;
 }
 </style>
