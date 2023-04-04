@@ -12,12 +12,10 @@ export default {
   props: {
     link: {
       type: String,
-      required: true,
       default: "JavaScript:;"
     },
     data: {
       type: String,
-      required: true,
       default: ""
     },
     title: {

@@ -30,13 +30,16 @@ export default {
       let hours = new Date().getHours();
       let minutes = new Date().getMinutes();
       let seconds = new Date().getSeconds();
+
       //个位数加 0
       hours = hours < 10 ? "0" + hours : hours;
       minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
+
       //创建挂载元素
       let div = document.createElement("div");
       div.className = "banner-color";
+
       //早上 6-11
       if (hours >= 6 && hours < 11) {
         addTip(
