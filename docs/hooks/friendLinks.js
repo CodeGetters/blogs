@@ -77,6 +77,12 @@ const prePartner = [
         link:"https://sunny-117.github.io/blog/",
         desc: "千锤万凿，你终成英雄",
         avatar: "https://avatars.githubusercontent.com/u/73089592?v=4"
+    },
+    {
+        title: "心月云",
+        link:"https://wch666.com/",
+        desc: "须知少时凌云志，曾许人间第一流！",
+        avatar: "https://wch666.com/head.png"
     }
 ]
 
