@@ -83,6 +83,12 @@ const prePartner = [
         link:"https://wch666.com/",
         desc: "须知少时凌云志，曾许人间第一流！",
         avatar: "https://wch666.com/head.png"
+    },
+    {
+        title:"俊逸的博客",
+        link:"https://lijunyi.xyz/",
+        desc: "一枚主职Java、副职前端的程序猿",
+        avatar: "https://lijunyi2.github.io/blog/logo.png"
     }
 ]
 
@@ -111,6 +117,12 @@ const recommend=[
         avatar: "https://img.lzxjack.top/img/202203302154224.webp",
         desc: "一只平凡的鸟罢了。"
     },
+    {
+        name:"三咲智子 Kevin Deng",
+        link:"https://xlog.sxzz.moe/",
+        avatar: "https://xlog.sxzz.moe/_next/image?url=https%3A%2F%2Fipfs.4everland.xyz%2Fipfs%2Fbafkreihcmikli6erxacovfw5xlwnaqv2ye7decbvlkxkljpfioqqsbipqe&w=128&q=75",
+        desc: "Gen Z | Student | Full Stack Developer 🏳️‍🌈"
+    }
 ]
 
 export {
