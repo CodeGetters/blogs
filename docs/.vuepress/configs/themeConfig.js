@@ -52,6 +52,7 @@ module.exports = {
                 {text: "多人协作", link: "/blogs/cooperation/01Git.html"},
                 {text: "博客", link: "/blogs/useBlog/01使用vuepress打造属于自己的博客.html"},
                 {text: "linux", link: "/blogs/linux/01linux无法联网解决方案.html"},
+                {text: "Java", link: "/blogs/java/01maven.html"},
             ]
         },
         {text: '时间轴', link: '/timeline/', icon: 'reco-date'},
